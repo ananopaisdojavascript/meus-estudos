@@ -1,0 +1,40 @@
+<h1>{{ title }}</h1>
+
+<!-- Indicação do jogador atual. Colocar aqui o valor da propriedade 
+  currentPlayer com o uso da associação de dados (data binding) e da interpolação -->
+
+<p>Jogador atual: {{ currentPlayer }}</p>
+
+<!-- Indicação do vencedor da partida. Colocar aqui o valor da propriedade winner 
+  com o uso da associação de dados (data binding) e da interpolação -->
+
+<p>Vencedor: {{ winner }}</p>
+
+<!-- Botão para reiniciar a partida. -->
+<!-- Vamos chamar o método para reiniciar a partida ao clicar nesse botão -->
+
+<button (click)="reset()">Reiniciar Partida</button>
+
+<!-- Tabuleiro do jogo. Para exibir os valores da propriedade criada na classe, 
+  vamos fazer da seguinte forma: o nome da propriedade com o índice que representa a 
+  linha e um índice que representa a coluna. Vamos passar agora a função criada na 
+  classe com os parâmetros de linha e coluna. Repetir o procedimento 
+  para todas as células. -->
+
+<table>
+  <tr>
+    <td (click)="processPlay(0, 0)">{{ board[0][0] }}</td>
+    <td (click)="processPlay(0, 1)">{{ board[0][1] }}</td>
+    <td (click)="processPlay(0, 2)">{{ board[0][2] }}</td>
+  </tr>
+  <tr>
+    <td (click)="processPlay(1, 0)">{{ board[1][0] }}</td>
+    <td (click)="processPlay(1, 1)">{{ board[1][1] }}</td>
+    <td (click)="processPlay(1, 2)">{{ board[1][2] }}</td>
+  </tr>
+  <tr>
+    <td (click)="processPlay(2, 0)">{{ board[2][0] }}</td>
+    <td (click)="processPlay(2, 1)">{{ board[2][1] }}</td>
+    <td (click)="processPlay(2, 2)">{{ board[2][2] }}</td>
+  </tr>
+</table>
