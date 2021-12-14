@@ -1,0 +1,39 @@
+<!-- A primeira forma de associação de dados que será vista aqui é a interpolação, 
+  usada com a sintaxe de chaves duplas e, dentro dessas chaves, colocamos a 
+  propriedade declarada no arquivo ts e que será lida no nosso template. 
+  Com a interpolação, conseguimos fazer a exibição de valores que são declarados 
+  dentro da classe. -->
+
+  <h1>{{ title }}</h1>
+
+  <h2>{{ value }}</h2>
+
+  <!-- Além de mostrar os valores das propriedades no template,
+    podemos chamar funções ou métodos definidos na nossa classe por meio da
+    associação de eventos (event binding) que é o tratamento de eventos
+  -->
+
+  <!-- Para fazer o nosso botão funcionar, vamos colocar a sintaxe da associação de eventos 
+    (event binding), que é o evento entre parênteses e um método definido na classe, 
+    ou seja, no arquivo ts. Dentro do template, podemos chamar o método sem usar 
+    o prefixo "this". Ao chamar esse método, estamos acessando o método criado na classe, 
+    aumentando ou diminuindo o valor, reagindo imediatamente ao clicar nos botões 
+    para exibir o valor novo -->
+
+  <!-- A associação de dados é um dos recursos mais importantes do Angular 
+    porque mostra a capacidade de um componente reagir a uma mudança de estado sem a 
+    necessidade de manipulação direta do DOM pelo JS. O Angular modifica apenas 
+    as partes da interface que precisam de atualização -->
+
+  <button (click)="increaseValue()">Aumentar</button>
+
+  <!-- Outro modo de usar os dados dos métodos e propriedades declarados na classe é a 
+    associação de propriedades (property binding) dentro do template HTML. 
+    Por exemplo, quero desabilitar o botão de diminuir o valor do contador quando 
+    chegar a zero. Para chegar a esse resultado, usamos a sintaxe de associação 
+    de propriedades e do lado o comportamento que queremos determinar para esse botão. 
+    Usamos essa sintaxe entre colchetes para atrelar a propriedade do elemento 
+    à propriedade da classe, no qual a interface reage imediatamente, isto é, 
+    quando o valor chegar a zero, o botão será desabilitado -->
+
+  <button (click)="decreaseValue()" [disabled]="value === 0">Diminuir</button>
