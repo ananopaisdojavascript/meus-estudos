@@ -1,0 +1,19 @@
+<!-- Vamos aprender a usar componentes que recebem outros componentes
+como "parâmetro" com uma diretiva chamada ng-content. Quando colocamos um
+elemento dentro dessa diretiva, o conteúdo aparece na tela. O ng-content
+marca o local dentro do componente onde será inserido tudo que estiver
+dentro do marcador do componente -->
+
+<h1>{{ title }}</h1>
+
+<app-item *ngFor="let item of items" [item]="item">
+  <input type="checkbox" [(ngModel)]="item.checked">
+</app-item>
+
+<button (click)="toggle()">Toggle checkboxes</button>
+
+
+<app-multiples>
+  <span title>Título</span>
+  <span description>Descrição</span>
+</app-multiples>

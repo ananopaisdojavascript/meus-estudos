@@ -1,0 +1,16 @@
+<!-- Vamos aprender a usar componentes que recebem outros componentes
+como "parâmetro" com uma diretiva chamada ng-content. Quando colocamos um
+elemento dentro dessa diretiva, o conteúdo aparece na tela. O ng-content
+marca o local dentro do componente onde será inserido tudo que estiver
+dentro do marcador do componente -->
+
+<div class="item">
+  <h1>
+    <ng-content></ng-content>
+    {{item.title}}
+  </h1>
+  <p>
+    <ng-content></ng-content>
+    {{item.description}}
+  </p>
+</div>
