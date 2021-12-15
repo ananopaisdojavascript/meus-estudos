@@ -1,0 +1,29 @@
+<!-- Diretivas são elementos do Angular que incluem um comportamento
+a elementos HTML ou o modificam. Podemos dividí-las em dois tipos:
+Diretivas de atribuicao: diretivas baseadas em atributos
+Diretivas estruturais: ngIf / ngFor / ngSwitchCase
+(Estruturas semelhantes aos comandos de escolha das linguagens
+de programação) -->
+
+<!-- ngIf: diretiva semelhante ao comando "if". Usamos esse comando para
+exibir um determinado elemento com base em uma condição lógica
+(se a condição for verdadeira, o elemento será exibido; se a condição
+for falsa, o elemento não será exibido) -->
+
+<!-- Vamos usar a diretiva *ngIf dentro da nossa div. O que vai aparecer
+dentro desse comando é uma expressão Angular. Como o valor inicial determinado
+é falso, o elemento não vai aparecer na tela. -->
+
+<!-- Vamos colocar dois botões: um para exibir e outro para ocultar
+  o elemento com base em um evento de clique -->
+
+<button (click)="mostrarElemento()" [disabled]="exibirElemento === true">Exibir</button>
+<button (click)="esconderElemento()" [disabled]="exibirElemento === false">Ocultar</button>
+
+<div *ngIf="exibirElemento">
+  <p>Este elemento será exbido ou ocultado</p>
+</div>
+
+<app-task-list></app-task-list>
+
+

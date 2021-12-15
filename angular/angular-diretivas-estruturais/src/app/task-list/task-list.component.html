@@ -1,0 +1,55 @@
+<!-- ngFor: diretiva semelhante ao laço de repetição "for". Esse comando
+percorre um vetor para poder exibir os elementos na tela -->
+
+<h1>{{ title }}</h1>
+
+<!-- Como o objetivo é mostrar cada tarefa da nossa lista, vamos usar
+o *ngFor para percorrer os elementos do vetor. A variável "tarefa"
+é criada para pegar os elementos do vetor -->
+
+<!-- Vamos deixar essa lista mais dinânica, isto é, incluir e excluir
+tarefas da nossa lista.
+Em primeiro lugar, vamos chamar um método para incluir tarefas com base
+no valor do input. Para isso, vamos usar um recurso chamado "template
+reference variable", é a criação de uma variável para fazer referência ao
+"template" do elemento declarado. A sintaxe é um sinal # e uma identificação.
+Essa variável pode ser usada no próprio "template"-->
+
+<div>
+  <input #descricaoTarefa type="text" placeholder="Digite uma tarefa">
+  <button (click)="incluirTarefa(descricaoTarefa.value)">Incluir tarefa</button>
+</div>
+
+<!-- Vamos usar a última diretiva chamada ngSwitchCase. Como vamos usá-la?
+Vamos indicar a quantidade de tarefas eliminadas da nossa lista. Dependendo da quantidade
+de tarefas, vamos mostrar mensagens diferentes -->
+<!-- ngSwitchCase: diretiva parecida com o comando "if", porém usada
+quando temos duas ou mais opções -->
+
+<div [ngSwitch]="tarefas.length">
+  <p *ngSwitchCase="0">Nenhuma tarefa</p>
+  <p *ngSwitchCase="1">Uma tarefa</p>
+  <p *ngSwitchDefault>{{tarefas.length}} tarefas</p>
+</div>
+
+<!-- É possível usar duas diretivas em um mesmo elemento? Há duas alternativas:
+  podemos criar um novo elemento na página apenas para colocar a segunda diretiva
+  com a diretiva ng-container (elemento virtual que na prática não existe na
+  renderização da página)
+  Queremos agora exibir as
+tarefas da lista que não foram concluídas. -->
+
+<table>
+  <!-- A variável i está implícita no escopo do ngFor que serve para capturar
+    o índice dos elementos -->
+  <tr *ngFor="let tarefa of tarefas; let i = index">
+    <ng-container *ngIf="!tarefa.tarefaFeita">
+      <td><input type="checkbox" [checked]="tarefa.tarefaFeita"></td>
+      <td>{{tarefa.tarefa}}</td>
+      <td><button (click)="excluirTarefa(i)">Excluir</button></td>
+    </ng-container>
+
+  </tr>
+</table>
+
+
