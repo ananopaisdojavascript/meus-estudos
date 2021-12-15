@@ -1,0 +1,35 @@
+<!-- Vamos aprender agora a associação de dados de via dupla
+ou "two way data binding". É um processo simultâneo de leitura
+e escrita de dados baseado em uma convenção muito simples, que é
+uma sintaxe envolvida entre colchetes e parênteses, que determina
+a entrada e saída de dados ao mesmo tempo. -->
+
+<h1>{{ title }}</h1>
+
+<!-- [(ngModel)]: diretiva que faz a associação bidirecional de dados
+em todos os elementos HTML de formulários -->
+
+<div>
+  <input [(ngModel)]="novaTarefa" type="text" placeholder="Digite uma tarefa">
+  <button (click)="incluirTarefa()">Incluir tarefa</button>
+</div>
+
+<div [ngSwitch]="tarefas.length">
+  <p *ngSwitchCase="0">Nenhuma tarefa</p>
+  <p *ngSwitchCase="1">Uma tarefa</p>
+  <p *ngSwitchDefault>{{tarefas.length}} tarefas</p>
+</div>
+
+<table>
+  <tr *ngFor="let tarefa of tarefas; let i = index">
+    <ng-container>
+      <td>
+        <input type="checkbox" [(ngModel)]="tarefa.tarefaFeita">
+      </td>
+      <td>{{tarefa.tarefa}}</td>
+      <td>
+        <button (click)="excluirTarefa(i)">Excluir</button>
+      </td>
+    </ng-container>
+  </tr>
+</table>
