@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+
+<!-- Existe a opção de adicionar uma classe dinânica aos elementos
+de um componente. -->
+
+<div>
+  <div [class]="className"></div>
+  <!-- Essa classe também pode retornar um objeto com uma chave e um valor
+  booleano dizendo se a classe está habilitada ou não -->
+  <div [class]="box: true"></div>
+  <!-- Essa é outra forma de retonar um valor booleano para ativar uma classe -->
+  <div [class.box]="true"></div>
+</div>
+
+<app-c2></app-c2>

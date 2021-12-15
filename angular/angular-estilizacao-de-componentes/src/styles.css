@@ -1,0 +1,17 @@
+/*
+A primeira forma de estilizar um componente é no arquivo styles.css.
+Trata-se de uma folha de estilos global de qualquer aplicativo Angular.
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: aqua;
+  border: 2px solid grey;
+  margin-right: 1rem;
+}

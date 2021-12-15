@@ -1,0 +1,16 @@
+/*
+Quando criamos um componente, um arquivo css é criado automaticamente.
+Essa folha de estilos é específica do componente criado, isto é,
+as regras de estilo definidas nessa folha vão valer somente para
+os elementos daquele componente.
+*/
+
+/*
+Podemos estilizar o componente que está em outro componente com
+um seletor especial chamado :host
+*/
+
+:host {
+  display: block;
+  border: 2px solid yellowgreen;
+}
