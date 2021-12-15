@@ -1,0 +1,24 @@
+<!-- Vamos começar a estudar o Input. Em primeiro lugar, devemos
+chamar os elementos do vetor configurado no arquivo ts para exibição
+na tela -->
+
+<h2>Minhas Canções Favoritas</h2>
+
+<!-- Com a propriedade declarada no arquivo ts do novo componente, vamos
+chamá-la por meio da associação de input ou "input binding". Desse modo,
+a propriedade passa a existir no componente principal -->
+
+<table>
+  <tr>
+    <th>Grupo</th>
+    <th>Canção</th>
+    <th>Nota</th>
+  </tr>
+  <tr *ngFor="let item of cancoes">
+    <td>{{item.grupo}}</td>
+    <td>{{item.cancao}}</td>
+    <td>
+      <app-notas [notas]="item.nota" (notasChange)="item.nota = $event"></app-notas>
+    </td>
+  </tr>
+</table>

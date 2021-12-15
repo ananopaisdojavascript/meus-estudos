@@ -1,0 +1,9 @@
+<!-- Esse parâmetro vai ser passado para o componente principal.
+Vamos agora colocar as estrelinhas no lugar das notas. -->
+
+<div *ngFor="let i of [1, 2, 3, 4, 5]" (click)="onClick(i)" class="star">
+  {{ notas >= i ? "&#9733;" : "&#9734;" }}
+</div>
+
+<div></div>
+<div></div>
