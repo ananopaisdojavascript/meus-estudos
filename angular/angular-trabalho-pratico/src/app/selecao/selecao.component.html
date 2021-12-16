@@ -1,0 +1,22 @@
+<div>
+  <div class="title">
+    <h2 class="titulo">{{titulo}}</h2>
+    <div *ngIf="escolhaAte !== 1">
+      <ng-container [ngSwitch]="opcoesSelecionadas.length">
+        <h4 *ngSwitchCase="1">Escolha até {{escolhaAte}} (1 selecionado)</h4>
+        <h4 *ngSwitchCase="2">Escolha até {{escolhaAte}} (2 selecionados)</h4>
+        <h4 *ngSwitchCase="3">Escolha até {{escolhaAte}} (3 selecionados)</h4>
+        <h4 *ngSwitchDefault>Escolha até {{escolhaAte}}</h4>
+      </ng-container>
+    </div>
+  </div>
+  <div *ngFor="let opcao of opcoes">
+    <label>
+      <input [type]="escolhaAte === 1 ? 'radio' : 'checkbox'"
+      (change)="selecionaOpcao(opcao)"
+      [checked]="opcoesSelecionadas.indexOf(opcao) !== -1"
+      [disabled]="opcoesSelecionadas.length === escolhaAte && opcoesSelecionadas.indexOf(opcao) !== -1"/>
+      {{opcao}}
+    </label>
+  </div>
+</div>
