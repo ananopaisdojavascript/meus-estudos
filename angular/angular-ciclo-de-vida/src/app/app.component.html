@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<!-- Vamos incluir um botão para colocar
+um componente na página e gerar um novo id-->
+
+<button (click)="add()">Adicionar</button>
+
+<!-- Exibir os componentes criados -->
+
+<div *ngFor="let item of array">
+  <app-refresh [id]="item"></app-refresh>
+  <button (click)="delete(item)">Excluir</button>
+</div>
+
+<div>
+  Label: <input [(ngModel)]="label">
+</div>
+
+<app-counter [label]="label"></app-counter>
