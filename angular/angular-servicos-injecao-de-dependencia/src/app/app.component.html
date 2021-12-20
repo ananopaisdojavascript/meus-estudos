@@ -1,0 +1,22 @@
+<!-- Serviços: são classes com dados ou lógica de negócio do aplicativo,
+que podem ser usados (injetados) em componentes ou outros serviços. Podem
+ser globais ou restritos a um componente. -->
+
+<!-- Para criar serviços, usamos o seguinte comando:
+ng generate service nome-do-servico -->
+
+<!-- Injeção de dependência: quando usamos (injetamos) um serviço em
+um ou mais componentes. Para funcionar, a injeção de dependência precisa
+de um injetor, que é uma base de dados de objetos que podem ser usados
+(injetados) em componentes -->
+
+<h1>{{title}}</h1>
+
+<div>
+  <input type="text" placeholder="Incluir tarefa" [(ngModel)]="novaTarefa">
+  <button (click)="taskService.incluirTarefa(novaTarefa)">Incluir tarefa</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of taskService.tarefas">{{item}}</li>
+</ul>
