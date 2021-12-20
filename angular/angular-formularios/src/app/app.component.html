@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="meuFormulario" (ngSubmit)="enviar()">
+  <div>
+    <label>Nome: </label>
+    <input type="text" formControlName="nome" >
+  </div>
+  <div>
+    <label>E-mail: </label>
+    <input type="text" formControlName="email">
+  </div>
+  <input [disabled]="meuFormulario.status !== 'VALID'" type="submit" value="Enviar">
+</form>
+
+<!-- Pesquisar por nomes em um vetor -->
+
+<form [formGroup]="snsd">
+  <input type="text" placeholder="Digite um nome" formControlName="member" [(ngModel)]="member">
+</form>
+
+<ul>
+  <li *ngFor="let girl of gg | snsd: member">{{girl}}</li>
+</ul>
