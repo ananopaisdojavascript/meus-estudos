@@ -1,0 +1,50 @@
+<!-- Pipes são funções que formatam ou transformam valores. Podemos usar
+esses pipes para formatar números, datas, horas e até para filtrar elementos
+de um vetor -->
+
+<h1>{{title}}</h1>
+
+<p>Texto sem formatação: {{text}}</p>
+
+<!-- {{texto | lowercase}}: transforma um texto em caixa baixa -->
+<p>Texto em caixa baixa: {{text | lowercase}}</p>
+
+<!-- {{texto | uppercase}}: transforma um texto em caixa alta -->
+<p>Texto em caixa alta: {{text | uppercase}}</p>
+
+<p>Número sem formatação: {{num}}</p>
+
+<!-- {{num | number:'1.1-1'}}: formata um número, especificando um número mínimo
+de casas antes da vírgula e um número mínimo e máximo de casas depois da vírgula -->
+<p>Número com formatação decimal: {{num | number:'1.1-1'}}</p>
+
+<p>Dia de hoje: {{diaDeHoje}}</p>
+
+<p>Dia de hoje com formatação: {{diaDeHoje | date:'short'}}</p>
+
+<p>Dia de hoje com outra formatação: {{diaDeHoje | date:'medium'}}</p>
+
+<p>CEP sem formatação: {{meuCEP}}</p>
+
+<!-- Uso do pipe personalizado -->
+<p>CEP com formatação: {{meuCEP | cep}}</p>
+
+<p>CPF sem formatação: {{meuCPF}}</p>
+
+<!-- Para criar um pipe usamos o seguinte comando no terminal:
+ng generate pipe nome-do-pipe -->
+
+<p>CPF com formatação: {{meuCPF | cpf}}</p>
+
+<div>
+  <input type="text" placeholder="Digite um nome" [(ngModel)]="novoNome">
+  <button (click)="incluirNome(novoNome)">Adicionar</button>
+</div>
+
+<ul>
+  <li *ngFor="let nome of lista">{{nome}}</li>
+</ul>
+
+<!-- Uso do pipe impuro criado para o vetor de nomes.
+Cada vez que um nome for incluído, a cadeia de caracteres será atualizada-->
+<p>{{lista | nome:', '}}</p>
