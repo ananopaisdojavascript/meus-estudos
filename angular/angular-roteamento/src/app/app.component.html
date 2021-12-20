@@ -1,0 +1,12 @@
+<!-- Roteamento no Angular -->
+
+<ul>
+  <!-- routerLink: diretiva que espefica o link -->
+  <li><a routerLink="/primeiro" routerLinkActive="active">Primeiro</a></li>
+  <li><a routerLink="/segundo/1">Segundo - Id 1</a></li>
+  <li><a routerLink="/segundo/2">Segundo - Id 2</a></li>
+</ul>
+
+<button (click)="irParaSegundo()">Segundo</button>
+
+<router-outlet></router-outlet>
