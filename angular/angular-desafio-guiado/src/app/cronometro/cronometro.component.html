@@ -1,0 +1,15 @@
+<div class="tempo-restante">{{formatarTempo(tempoRestante)}}</div>
+<div>Exercício {{exercicioAtual + 1}} de {{exerciciosArray.length}}: {{exerciciosArray[exercicioAtual].nomeDoExercicio}}</div>
+<div>Repetição: {{repeticaoAtual + 1}} de {{exerciciosArray[exercicioAtual].repeticoes}}</div>
+<div [ngSwitch]="fase">
+  <p *ngSwitchCase="0">Fase: Preparação</p>
+  <p *ngSwitchCase="1">Fase: Exercício</p>
+  <p *ngSwitchCase="2">Fase: Descanso</p>
+</div>
+
+<div>
+  <button (click)="iniciar()">Iniciar</button>
+  <button (click)="pausar()">Pausar</button>
+  <button (click)="reiniciar()">Reiniciar</button>
+  <button (click)="proximo()">Próximo</button>
+</div>
