@@ -1,0 +1,26 @@
+<form [formGroup]="memberForm" (ngSubmit)="postMember()">
+  <div>
+    <input type="text" placeholder="Digite um nome" formControlName="name">
+  </div>
+  <div>
+    <input type="text" placeholder="Digite um grupo" formControlName="group">
+  </div>
+  <input type="submit" value="Cadastrar" [disabled]="memberForm.invalid">
+</form>
+
+<table>
+  <tr>
+    <th>Identificação</th>
+    <th>Nome</th>
+    <th>Grupo</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let member of membersArray">
+    <td [ngStyle]="{'color':getColor(member.group)}">{{member.id}}</td>
+    <td [ngStyle]="{'color':getColor(member.group)}">{{member.name}}</td>
+    <td [ngStyle]="{'color':getColor(member.group)}">{{member.group}}</td>
+    <td><button><a [routerLink]="['/update', member.id]">Editar</a></button></td>
+    <td><button (click)="deleteMember(member)">Excluir</button></td>
+  </tr>
+</table>

@@ -1,0 +1,15 @@
+<form [formGroup]="memberForm">
+  <input type="text" [(ngModel)]="member" placeholder="Digite um nome" formControlName="name">
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Grupo</th>
+  </tr>
+  <tr *ngFor="let member of membersArray | filter:member">
+    <td>{{member.id}}</td>
+    <td>{{member.name}}</td>
+    <td>{{member.group}}</td>
+  </tr>
+</table>
