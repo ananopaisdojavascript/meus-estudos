@@ -1,0 +1,29 @@
+
+<!-- <router-outlet></router-outlet> -->
+
+<form [formGroup]="formularioDeProdutos" (ngSubmit)="incluirProduto()">
+  <div>
+    <input type="text" placeholder="Digite um produto" formControlName="nome">
+  </div>
+  <div>
+    <input type="number" min="0" formControlName="preco">
+  </div>
+  <input [disabled]="formularioDeProdutos.invalid" type="submit" value="Cadastrar produto">
+</form>
+
+<table>
+  <tr>
+    <th>Identificação</th>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let produto of produtos">
+    <td>{{produto.id}}</td>
+    <td>{{produto.nome}}</td>
+    <td>{{produto.preco | currency:'BRL'}}</td>
+    <td>
+      <button (click)="excluirProduto(produto)">Excluir</button>
+    </td>
+  </tr>
+</table>
