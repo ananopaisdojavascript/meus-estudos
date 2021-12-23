@@ -1,16 +1,27 @@
-
 <div>
-  <input type="text" placeholder="Digite um nome">
+  <input type="text" placeholder="Digite um nome" [(ngModel)]="member">
 </div>
 
 <div>
-  <select>
+  <select [(ngModel)]="group">
     <option></option>
+    <option value="BlackPink">BlackPink</option>
+    <option value="Twice">Twice</option>
+    <option value="Red Velvet">Red Velvet</option>
+    <option value="Loona">Loona</option>
+    <option value="SNSD">SNSD</option>
   </select>
 </div>
 
-
-
-<ul>
-  <li *ngFor="let member of members">{{member.name}}</li>
-</ul>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Group</th>
+  </tr>
+  <tr *ngFor="let m of members | member:member | tablefilter:group">
+    <td>{{m.id}}</td>
+    <td>{{m.name}}</td>
+    <td>{{m.group}}</td>
+  </tr>
+</table>
