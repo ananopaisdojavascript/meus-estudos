@@ -108,6 +108,8 @@ app.listen(port, () => {
 }
 ```
 
+- Fazer o download da CLI do PlanetScale ([app.planetscale.com/cli](http://app.planetscale.com/cli))
+
 - Digitar o seguinte comando: `pscale database create nome-da-base-de-dados`
 
 - Dentro da CLI do PlanetScale ([app.planetscale.com/cli](http://app.planetscale.com/cli)),  entrar na base criada (dentro do Dashboard)
@@ -188,7 +190,7 @@ pscale connect nome-da-base-de-dados dev –execute ‘npm run dev’
 
 ```typescript
 app.get(‘api/characters/:id’, (request: Request, response: Response) => {
-		const id = [request.params.id](http://request.params.id)
+		const id = request.params.id
 		const query = `SELECT * FROM Characters WHERE ID = ${id} LIMIT 1`;
 		connection.query(query, (error, rows) => {
 			if(error) throw error;
