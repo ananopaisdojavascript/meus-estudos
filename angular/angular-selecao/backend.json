@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Jisoo",
+      "group": "BlackPink"
+    },
+    {
+      "id": 2,
+      "name": "Mina",
+      "group": "Twice"
+    },
+    {
+      "id": 3,
+      "name": "Irene",
+      "group": "Red Velvet"
+    },
+    {
+      "name": "Rosé",
+      "group": "BlackPink",
+      "id": 4
+    },
+    {
+      "name": "Wendy",
+      "group": "Red Velvet",
+      "id": 5
+    },
+    {
+      "name": "Joy",
+      "group": "Red Velvet",
+      "id": 6
+    },
+    {
+      "name": "Lisa",
+      "group": "BlackPink",
+      "id": 7
+    },
+    {
+      "name": "Momo",
+      "group": "Twice",
+      "id": 8
+    }
+  ]
+}
