@@ -152,7 +152,7 @@ VALUES (“wqwqwqw”, “sasasasas”, “adsaasdasda”);
 - De volta ao arquivo `app.ts`, fazer o seguinte:
 
 ```typescript
-app.get(‘api/characters’, (request: Request, response: Response) => {
+app.get(‘/characters’, (request: Request, response: Response) => {
 const query = “SELECT * FROM Characters”;
 response.send(“It works”)
 })
@@ -165,7 +165,7 @@ const connectionString = process.env.DATABASE_URL || “”;
 const connection = mysql.createConnection(connectionString);
 connection.connect();
 
-app.get(‘api/characters’, (request: Request, response: Response) => {
+app.get(‘/characters’, (request: Request, response: Response) => {
 	const query = “SELECT * FROM Characters”;
 		connection.query(query, (error, rows) => {
 		if(error) throw error;
@@ -189,7 +189,7 @@ pscale connect nome-da-base-de-dados dev –execute ‘npm run dev’
 - Fazer a modificação a seguir na segunda rota:
 
 ```typescript
-app.get(‘api/characters/:id’, (request: Request, response: Response) => {
+app.get(‘/characters/:id’, (request: Request, response: Response) => {
 		const id = request.params.id
 		const query = `SELECT * FROM Characters WHERE ID = ${id} LIMIT 1`;
 		connection.query(query, (error, rows) => {
