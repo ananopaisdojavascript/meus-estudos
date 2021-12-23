@@ -87,7 +87,7 @@ npm install –save-dev @types/express @types/node @types/mysql
 
 
 ```typescript
-import { Request, Response } from ‘express’;
+import express, { Request, Response } from ‘express’;
 import mysql from ‘mysql’;
 const app = express();
 const port = process.env.PORT || 3000;
