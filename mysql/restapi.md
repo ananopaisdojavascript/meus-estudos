@@ -93,12 +93,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Rotas
-app.get(‘api/characters’, (request: Request, response: Response) => {
+app.get(‘/characters’, (request: Request, response: Response) => {
 	response.send(“It works”)
 })
 
-app.get(‘api/characters/:id’, (request: Request, response: Response) => {
-	const id = [request.params.id](http://request.params.id)
+app.get(‘/characters/:id’, (request: Request, response: Response) => {
+	const id = request.params.id
 	response.send(“It works for id ” + id)
 })
 
