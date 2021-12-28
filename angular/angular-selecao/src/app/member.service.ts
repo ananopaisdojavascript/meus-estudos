@@ -8,7 +8,7 @@ import { Members } from './members';
 export class MemberService {
   constructor(private http: HttpClient) {}
 
-  urlBase = 'http://localhost:3000';
+  urlBase = 'https://restapi-mysql-exemplo.herokuapp.com';
 
   getData() {
     return this.http.get<Members[]>(`${this.urlBase}/members`);
