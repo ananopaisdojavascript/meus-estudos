@@ -120,6 +120,14 @@ mysql://b54966f5205365:9cbaa662@eu-cdbr-west-01.cleardb.com/heroku_b1791a6475f6a
 |--------------------- | ---------- | --------- | ---------- |
 |b54966f5205365|eu-cdbr-west-01.cleardb.com | 9cbaa662 | heroku_b1791a6475f6a54 |
 
+- Ainda em **Config Vars**, fazer os seguintes ajustes:
+
+|KEY|VALUE|
+|---|-----|
+|NODE_MODULES_CACHE|false|
+|NPM_CONFIG_PRODUCTION|true|
+|USE_NPM_INSTALL|true|
+
 - Vamos conectar o ClearDB à nossa base de dados. Vamos usar um programa chamado **arctype** (https://arctype.com/). É possível usar a conta do Google ou criar usuário e senha. Após o registro, vamos entrar no programa. Na tela inicial, clicar no nome que aparece na parte superior esquerda da tela e clicar em **Create new workspace...**
 
 - Vamos configurar a conexão. Escolher **MySQL** na tela inicial e depois colocar todas as informações do nosso endereço nas configurações. Clicar em **Test Connection** e depois em **Save**
