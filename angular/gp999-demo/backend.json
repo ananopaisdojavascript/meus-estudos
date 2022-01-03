@@ -1,0 +1,25 @@
+{
+  "girls": [
+    {
+      "name": "Choi Yujin",
+      "age": 24,
+      "country": "South Korea",
+      "MBTI": "ENFP",
+      "imageLink": "https://static.wikia.nocookie.net/kpop/images/2/2a/Choi_Yu_Jin_Girls_Planet_999_profile_photo_1.png/revision/latest/scale-to-width-down/1000?cb=20210717151430"
+    },
+    {
+      "name": "Ezaki Hikaru",
+      "age": 17,
+      "country": "Japan",
+      "MBTI": "ESFP",
+      "imageLink": "https://static.wikia.nocookie.net/kpop/images/8/8b/Ezaki_Hikaru_Girls_Planet_999_profile_photo_%281%29.png/revision/latest/scale-to-width-down/800?cb=20210810015451"
+    },
+    {
+      "name": "Fu Ya Ning",
+      "age": 26,
+      "country": "China",
+      "MBTI": "ENTJ",
+      "imageLink": "https://static.wikia.nocookie.net/kpop/images/1/1d/Fu_Yaning_Girls_Planet_999_profile_photo_%281%29.png/revision/latest/scale-to-width-down/800?cb=20210726185054"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<button (click)="openModal()">Open Modal</button>
+
+<section class="modal" *ngIf="showModal">
+  <div class="modal__content">
+    <button class="modal__content-button" (click)="closeModal()">Close Modal</button>
+    <h2>Oi! Eu sou um modal!</h2>
+    <p>Posso aparecer em qualquer parte do seu aplicativo</p>
+  </div>
+</section>
