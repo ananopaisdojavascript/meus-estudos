@@ -1,0 +1,18 @@
+<body>
+  <section class="grid-section">
+    <div class="grid" *ngFor="let cat of cats">
+      <div class="grid-img">
+        <img src="{{cat.imgLink}}">
+      </div>
+      <div class="overlay">
+        <h2>{{cat.title}}</h2>
+        <button class="btn" (click)="openModal(cat)">Enter</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" *ngIf="showModal">
+    <button class="modal-btn btn" (click)="closeModal()" >Close</button>
+        <img src="{{imageSrc}}" alt="" class="modal__content">
+  </section>
+</body>
