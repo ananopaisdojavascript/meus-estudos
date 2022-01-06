@@ -21,4 +21,5 @@ export class AppService {
   getGirls() {
     return this.http.get<Girls[]>(`${this.urlBase}/girls`);
   }
+
 }

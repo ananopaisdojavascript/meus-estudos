@@ -12,7 +12,13 @@ export class AppComponent implements OnInit{
 
   girls: Girls[] = [];
 
-  showModal: boolean = false;
+  showModal = false;
+
+  imageSrc = '';
+  countrySrc = '';
+  nameSrc = '';
+  ageSrc = 0;
+  personality = '';
 
   constructor(private appService: AppService) {}
 
@@ -22,11 +28,16 @@ export class AppComponent implements OnInit{
     })
   }
 
-  openModal() {
+  openModal(girl: Girls): void {
+    this.imageSrc = girl.imageLink;
+    this.nameSrc = girl.name;
+    this.ageSrc = girl.age;
+    this.countrySrc = girl.country;
+    this.personality = girl.MBTI;
     this.showModal = true;
   }
 
-  closeModal() {
+  closeModal(): void {
     this.showModal = false;
   }
 }

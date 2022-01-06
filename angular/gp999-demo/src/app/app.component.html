@@ -1,31 +1,32 @@
-<section>
-  <div class="row">
-    <div class="cards" *ngFor="let girl of girls">
-      <div class="cards__image">
-        <img src="{{girl.imageLink}}" alt="{{girl.name}}">
-      </div>
-      <div class="cards__content">
-        <div class="cards__content-details">
-          <h2>{{girl.name}}</h2>
-          <button class="cards_content-details-button" (click)="openModal()">Learn More</button>
+<body>
+  <section class="wrapper">
+    <ul class="girls grid">
+      <li *ngFor="let girl of girls">
+        <div class="card">
+          <div class="card__image">
+            <img src="{{girl.imageLink}}" alt="{{girl.name}}">
+          </div>
+          <div class="card__content">
+            <div class="card__content-box">
+              <h3>{{girl.name}}</h3>
+              <button (click)="openModal(girl)">Learn More</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </li>
+    </ul>
+  </section>
 
-<section class="modal" *ngIf="showModal">
-  <div class="modal__content">
-    <button class="modal__content-close" (click)="closeModal()">Close</button>
-    <div class="modal__content-container" *ngFor="let girl of girls">
-      <div class="modal__content-image">
-        <img src="{{girl.imageLink}}" alt="{{girl.name}}">
-      </div>
-      <div class="modal__content-info">
-        <div class="modal__content-info-title">
-          <h1>{{girl.name}}</h1>
-        </div>
-        <div class="modal__content-info-data">
+
+  <section class="modal" *ngIf="showModal">
+    <div class="modal__content">
+      <button class="modal__content-close" (click)="closeModal()">Close</button>
+      <ul class="row">
+        <li>
+          <img src="{{imageSrc}}" alt="{{nameSrc}}">
+        </li>
+        <li>
+          <h1>{{nameSrc}}</h1>
           <div class="container">
             <div class="left">
               <p>Age:</p>
@@ -33,15 +34,15 @@
               <p>MBTI:</p>
             </div>
             <div class="right">
-              <p>{{girl.age}}</p>
-              <p>{{girl.country}}</p>
-              <p>{{girl.MBTI}}</p>
+              <p>{{ageSrc}}</p>
+              <p>{{countrySrc}}</p>
+              <p>{{personality}}</p>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
+</body>
 
 <router-outlet></router-outlet>
