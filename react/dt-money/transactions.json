@@ -1,0 +1,20 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "transaction": "Desenvolvimento de aplicativo",
+            "transactionCategory": "Venda",
+            "kindOfTransaction": "deposit",
+            "value": 200000,
+            "date": "20/01/2021"
+        },
+        {
+            "id": 2,
+            "transaction": "Aluguel",
+            "transactionCategory": "Casa",
+            "kindOfTransaction": "withdraw",
+            "value": 800,
+            "date": "21/01/2021"
+        }
+    ]
+}

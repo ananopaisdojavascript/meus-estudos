@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Estudar Angular",
+      "isTheTaskDone": true
+    },
+    {
+      "id": 2,
+      "task": "Ir ao supermercado",
+      "isTheTaskDone": false
+    },
+    {
+      "id": 3,
+      "task": "",
+      "isTheTaskDone": false
+    }
+  ]
+}

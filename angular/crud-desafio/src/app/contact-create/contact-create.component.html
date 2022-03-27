@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<form [formGroup]="createContactForm" (submit)="submitContact()">
+  <input type="text" placeholder="Digitar nome" formControlName="name">
+  <input type="text" placeholder="Digitar telefone" formControlName="phone">
+  <div>
+    <button>Cancelar</button>
+    <button type="submit" [disabled]="createContactForm.invalid">Cadastrar</button>
+  </div>
+</form>

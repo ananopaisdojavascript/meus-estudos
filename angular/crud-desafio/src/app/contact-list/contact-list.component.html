@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<ul>
+  <li *ngFor="let contact of contacts; let i = index">
+    <a [routerLink]="['/contacts', contact.id]">{{ contact.name }}</a>
+    <button (click)="deleteContact(contact)">Excluir</button>
+  </li>
+
+</ul>
+
+<a routerLink="/contacts/create">Cadastrar Contato</a>

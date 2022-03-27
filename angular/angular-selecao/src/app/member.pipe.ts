@@ -5,15 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MemberPipe implements PipeTransform {
 
-  transform(items: any[], searchText: string): any[] {
-    if (!items) return [];
-    if (!searchText) return items;
+  transform(value: any, args?: any): any {
+    if(!value)return null;
+    if(!args)return value;
 
-    return items.filter(item => {
-      return Object.keys(item).some(key => {
-        return String(item[key]).toLowerCase().includes(searchText.toLowerCase());
-      });
+    args = args.toLowerCase();
+
+    return value.filter(function(data: any){
+        return JSON.stringify(data).toLowerCase().includes(args);
     });
-  }
+}
 
 }

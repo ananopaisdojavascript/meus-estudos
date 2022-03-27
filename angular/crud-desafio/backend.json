@@ -1,0 +1,29 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Ana",
+      "phone": "(11) 96252-7655"
+    },
+    {
+      "id": 2,
+      "name": "Maria",
+      "phone": "(11) 97083-8933"
+    },
+    {
+      "id": 3,
+      "name": "Angelica",
+      "phone": "(11) 99536-7909"
+    },
+    {
+      "name": "Paula",
+      "phone": "(11) 94029-2227",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Reginaldo",
+      "phone": "(11) 95173-4547"
+    }
+  ]
+}
