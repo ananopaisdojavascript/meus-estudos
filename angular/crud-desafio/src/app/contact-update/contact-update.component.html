@@ -1,12 +1,11 @@
 <h1>{{ title }}</h1>
 
 <form [formGroup]="updateContactForm" (submit)="submitUpdate()">
-  <input type="text" placeholder="Digitar nome" formControlName="name">
-  <input type="text" placeholder="Digitar telefone" formControlName="phone">
+  <input type="text" placeholder="Digitar nome" name="name" formControlName="name">
+  <input type="text" placeholder="Digitar telefone" name="phone" formControlName="phone">
   <div>
-    <button (click)="cancelContact()">Cancelar</button>
-    <button><a routerLink="/contacts">Voltar</a></button>
-    <button type="submit" [disabled]="updateContactForm.invalid || !updateContactForm.dirty">Atualizar</button>
+    <button><a routerLink="/contacts" class="contact-list-btn">Voltar</a></button>
+    <button type="submit" [disabled]="updateContactForm.invalid || !updateContactForm.dirty" class="update-contact">Atualizar</button>
   </div>
 </form>
 

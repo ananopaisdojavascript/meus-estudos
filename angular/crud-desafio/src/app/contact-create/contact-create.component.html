@@ -1,10 +1,10 @@
-<h1>{{ title }}</h1>
+<h1 class="create-contact-title">{{ title }}</h1>
 
-<form [formGroup]="createContactForm" (submit)="submitContact()">
-  <input type="text" placeholder="Digitar nome" formControlName="name">
-  <input type="text" placeholder="Digitar telefone" formControlName="phone">
+<form [formGroup]="createContactForm" (submit)="submitContact()" class="create-contact-form">
+  <input type="text" placeholder="Digitar nome" formControlName="name" name="name" class="contact-name">
+  <input type="text" placeholder="Digitar telefone" formControlName="phone" name="phone" class="contact-phone">
   <div>
-    <button>Cancelar</button>
-    <button type="submit" [disabled]="createContactForm.invalid">Cadastrar</button>
+    <button class="clean-contact-form">Cancelar</button>
+    <button type="submit" [disabled]="createContactForm.invalid" class="include-contact">Cadastrar</button>
   </div>
 </form>

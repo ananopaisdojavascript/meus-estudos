@@ -21,10 +21,6 @@ export class ContactUpdateComponent implements OnInit {
 
   id: number | string | undefined;
 
-  cancelContact() {
-    this.updateContactForm.reset()
-  }
-
   ngOnInit(): void {
     this.router.paramMap.subscribe(param => {
       this.id = Number(param.get('id'))
