@@ -81,15 +81,13 @@ npm init
 - Ao chegar em **entry point**, digite o nome da pasta e do arquivo que estará nessa pasta
 
 ```
-entry point: (index.js) source/server.ts
-// source: pasta que vai aramazenar nosso arquivo
-// server.ts: nome do nosso arquivo porque vamos usar o Typescript
+entry point: (index.js) server.js
 ```
 
 - Vamos fazer a instalação das dependências a seguir.
 
 ```
-npm install --save-dev express dotenv mysql typescript nodemon prettier body-parser ts-node @types/express @types/dotenv @types/mysql @types/nodemon @types/body-parser
+npm install express dotenv mysql typescript nodemon body-parser ts-node @types/express @types/dotenv @types/mysql @types/nodemon @types/body-parser
 ```
 
 - Digite o seguinte comando para criar o arquivo `tsconfig.json`.
@@ -102,27 +100,34 @@ npx tsc --init
 
 ```json
 {
-	"compilerOptions": {
-		"target": "es5",
-        "module": "commonjs",
-		"outDir": "./build",
-		"strict": true,
-		"esModuleInterop": true,
-		"experimentalDecorators": true
-	}
+  "compilerOptions": {
+    "target": "es6",   
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
 }
 ```
 
-- `build` será a pasta onde ocorrerá a transposição do arquivo `.ts` para um arquivo `.js` comum.
+- `dist` será a pasta onde ocorrerá a transposição do arquivo `.ts` para um arquivo `.js` comum.
 
 - Vá para o arquivo `package.json` para fazer a seguinte configuração:
 
 ```json
  "scripts": {
-    "start": "node source/server.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc",
-    "dev": "nodemon"
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev": "nodemon server.ts"
   }
+```
+
+- Digite o seguinte comando para rodar o Typescript pela primeira vez:
+
+```
+npx tsc
 ```
 
 - Essa configuração permite a compilação dos arquivos de Javascript para Typescript.
@@ -150,197 +155,68 @@ Crie uma pasta chamada `.vscode` e crie um arquivo chamado `settings.json` dentr
 
 - Esses comandos permitem a configuração automática do nosso projeto no VS Code. 
 
-- Crie uma pasta chamada `source` e, dentro dessa pasta, crie uma nova pasta chamada `config`. Dentro da pasta `config`, crie um arquivo chamado `logging.ts`. Já nesse arquivo, crie a primeira função:
+- Dentro da pasta do projeto, crie um arquivo chamado `server.ts`. Vamos fazer as seguintes configurações (esse arquivo será o servidor da nossa API).
 
 ```typescript
-const getTimeStamp = (): string => {
- return new Date().toISOString();
-}
 
-// Retorna a data atual em um formato legível
-```
-
-- Crie mais uma funcão:
-
-```typescript
-const info = (namespace: string, message: string, object?: any) => {
-  // Verificar se um objeto está sendo passado
-  if(object) {
-    console.log(`[${getTimeStamp()}] [INFO] [${namespace}] ${message}`, object)
-  } else {
-    console.log(`[${getTimeStamp()}] [INFO] [${namespace}] ${message}`)
-  }
-}
-```
-
-- Crie mais três funções iguais à função anterior.
-
-```typescript
-const warn = (namespace: string, message: string, object?: any) => {
-  if(object) {
-    console.warn(`[${getTimeStamp()}] [WARN] [${namespace}] ${message}`, object)
-  } else {
-    console.warn(`[${getTimeStamp()}] [WARN] [${namespace}] ${message}`)
-  }
-}
-
-const error = (namespace: string, message: string, object?: any) => {
-  if(object) {
-    console.error(`[${getTimeStamp()}] [ERROR] [${namespace}] ${message}`, object)
-  } else {
-    console.error(`[${getTimeStamp()}] [ERROR] [${namespace}] ${message}`)
-  }
-}
-
-const debug = (namespace: string, message: string, object?: any) => {
-  if(object) {
-    console.debug(`[${getTimeStamp()}] [DEBUG] [${namespace}] ${message}`, object)
-  } else {
-    console.debug(`[${getTimeStamp()}] [DEBUG] [${namespace}] ${message}`)
-  }
-}
-```
-
-- Com todas as funções criadas, vamos exportá-las
-
-```typescript
-export default { info, warn, error, debug }
-```
-
-- O arquivo completo fica assim:
-
-```typescript
-const info = (namespace: string, message: string, object?: any) => {
-    if (object) {
-        console.info(`[${getTimeStamp()}] [INFO] [${namespace}] ${message}`, object);
-    } else {
-        console.info(`[${getTimeStamp()}] [INFO] [${namespace}] ${message}`);
-    }
-};
-
-const warn = (namespace: string, message: string, object?: any) => {
-    if (object) {
-        console.warn(`[${getTimeStamp()}] [WARN] [${namespace}] ${message}`, object);
-    } else {
-        console.warn(`[${getTimeStamp()}] [WARN] [${namespace}] ${message}`);
-    }
-};
-
-const error = (namespace: string, message: string, object?: any) => {
-    if (object) {
-        console.error(`[${getTimeStamp()}] [ERROR] [${namespace}] ${message}`, object);
-    } else {
-        console.error(`[${getTimeStamp()}] [ERROR] [${namespace}] ${message}`);
-    }
-};
-
-const debug = (namespace: string, message: string, object?: any) => {
-    if (object) {
-        console.debug(`[${getTimeStamp()}] [DEBUG] [${namespace}] ${message}`, object);
-    } else {
-        console.debug(`[${getTimeStamp()}] [DEBUG] [${namespace}] ${message}`);
-    }
-};
-
-const getTimeStamp = (): string => {
-    return new Date().toISOString();
-};
-
-export default {
-    info,
-    warn,
-    error,
-    debug
-};
-```
-
-- Ainda dentro da pasta `config`, crie um arquivo chamado `config.ts`. Vamos incluir as seguintes configurações:
-
-```typescript
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
-const SERVER_PORT = process.env.SERVER_PORT || 1337
-
-// Verifica se process.env.SERVER_PORT existe. Caso contrário, acessa a porta 1337
-
-const SERVER = {
-   hostname: SERVER_HOSTNAME,
-   port: SERVER_PORT
-}
-
-const config = {
-   server: SERVER
-}
-
-export default config;
-```
-
-- Dentro da pasta `source`, crie um arquivo chamado `server.ts`. Vamos fazer as seguintes configurações (esse arquivo será o servidor da nossa API).
-
-```typescript
-import http from 'http';
-import express from 'express';
+import express, { Request, Response } from 'express';
+import mysql from 'mysql';
 import bodyParser from 'body-parser';
-import logging from './config/logging';
-import config from './config/config';
+require('dotenv').config();
+const app = express();
+const port = process.env.PORT || 5000;
 
-const NAMESPACE = 'Server';
-const router = express();
+const connection = mysql.createConnection({
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_DB
+});
 
-// Log da requisição
-// Middleware: função que permite a modificação de requisições
-router.use((req, res, next) => {
-    /** Log da requisicão */
-    logging.info(NAMESPACE, `METHOD: [${req.method}] - URL: [${req.url}] - IP: [${req.socket.remoteAddress}]`);
+app.use(bodyParser.urlencoded({ extended: false }))
 
-    res.on('finish', () => {
-        /** Log da resposta */
-        logging.info(NAMESPACE, `METHOD: [${req.method}] - URL: [${req.url}] - STATUS: [${res.statusCode}] - IP: [${req.socket.remoteAddress}]`);
+app.use(bodyParser.json());
+
+app.get('/people', (request: Request, response: Response) => {
+    const query = 'SELECT * FROM people';
+    connection.query(query, (error, results, fields) => {
+        if (error) throw error;
+        response.send(JSON.stringify(results));
     })
-    
-    next();
-});
-
-/** Parse do corpo da requisicão */
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
-
-/** Regras da API */
-router.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-
-    if (req.method == 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-        return res.status(200).json({});
-    }
-
-    next();
-});
-
-router.get('/names', (req, res, next) => {
-    res.send("Hey!!!!!")
-});
-
-router.get('/names/:id', (req, res, next) => {
-	const id = req.params.id;
-	res.send(`Hey ${id}!`)
 })
 
-/** Tratamento de erros */
-router.use((req, res, next) => {
-    const error = new Error('Not found');
+app.get('/people/:id', (request: Request, response: Response) => {
+    const id = request.params.id;
+    const query = `SELECT * FROM people WHERE id = ${id}`;
+    connection.query(query, (error, results, fields) => {
+        if (error) throw error;
+        response.send(JSON.stringify(results));
+    })
+})
 
-    res.status(404).json({
-        message: error.message
-    });
-});
+setInterval(function () {
+    connection.query('SELECT 1');
+}, 5000);
 
-const httpServer = http.createServer(router);
-
-httpServer.listen(config.server.port, () => logging.info(NAMESPACE, `Server is running ${config.server.hostname}:${config.server.port}`));
+app.listen(port, () => console.log(`Servidor funcionando na porta ${port}! Uhu!!!!!`));
 ```
 
+- Agora vamos subir a nossa API para o Heroku. Instale o Heroku CLI
+
+- No terminal (pasta do projeto), digite o seguinte comando:
+
+```
+heroku login
+```
+
+- Para criar um repositório do projeto no Heroku, digite o seguinte comando:
+
+```
+heroku git:remote -a example-app
+```
+
+- Para subir a API para o Heroku, digite o seguinte comando:
+
+```
+git push heroku main
+```
