@@ -1,80 +1,46 @@
-# React - Fundamentos
+# Getting Started with Create React App
 
-Vamos aprender o React desde os conceitos iniciais. A primeira atitude que deve ser tomada é criar o arquivo `package.json` que é vai ser a base para qualquer projeto com NodeJS. Podemos digitar os seguintes comandos:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-```
-yarn init -y
-```
+## Available Scripts
 
-Ou
+In the project directory, you can run:
 
-```
-npm init -y
-```
+### `npm start`
 
-O arquivo `package.json` sempre vai conter os dados iniciais de qualquer projeto. A parte principal desse arquivo são as dependências (códigos de terceiros que instalamos no nosso aplicativo) dos nossos projetos.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Quando instalamos qualquer dependência no nosso projeto, vai aparecer uma pasta chamada `node_modules`, que armazena o código de todas as bibliotecas usadas nos nossos aplicativos.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Vamos instalar agora o **React** e o **ReactDOM**
+### `npm test`
 
-```
-yarn add react
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-yarn add react-dom
-```
+### `npm run build`
 
-### O que é o ReactDOM?!
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-É o modo que trabalhamos com o React para a web. Permite com que o React se comunique com a árvore de elementos do HTML. 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Vamos criar nossas pastas:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Pasta `src`: pasta que vai armazenar todos os códigos do aplicativo.
-- Pasta `public`: pasta que vai armazenar arquivos públicos que precisam ser acessados por meios externos , principalmente o arquivo `index.html`
+### `npm run eject`
 
-Vamos instalar agora o **Babel**, que "traduz" o código criado em outro código que seja lido pelos navagadores mais modernos. O comando é o seguinte:
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-yarn add @babel/core @babel/cli @babel/preset-env -D
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Vamos criar um arquivo chamado `babel.config.js` e colocar a primeira configuracão:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```javascript
-module.exports = {
-    presets: [
-        '@babel/preset-env'
-    ]
-}
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Vamos ver qual é a funcão de cada biblioteca:
+## Learn More
 
-- `@babel/core`: biblioteca principal do **Babel**
-- `@babel/preset-env`: biblioteca que identifica o ambiente no qual o aplicativo está sendo executado para converter o código da melhor maneira possível
-- `@babel/cli`: permite executar o **Babel** pela linha de comando
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Para rodar o **Babel** é só digitar:
-
-```
-yarn babel src/index.js --out-file dist/bundle.js 
-```
-
-Esse comando converte o arquivo `index.js` criado em outro arquivo que vai ficar armazenado na pasta `dist` (pasta de distribuicão) que também será criada.
-
-E se eu quiser ler um arquivo na estrutura do React? Vamos digitar o comando:
-
-```
-yarn add @babel/preset-react -D
-```
-
-Vamos usar agora o **Webpack**. Essa biblioteca tem recursos para converter arquivos em formatos que os navegadores possam entender. Vamos digitar o seguinte comando:
-
-```
-yarn add webpack webpack-cli webpack-dev-server -D
-```
-
-Vamos agora criar um arquivo chamado `webpack.config.js`
+To learn React, check out the [React documentation](https://reactjs.org/).
