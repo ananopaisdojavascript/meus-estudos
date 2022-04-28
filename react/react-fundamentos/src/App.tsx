@@ -4,6 +4,8 @@ import Basic from './elements/Basic';
 import Counter from './elements/Counter';
 import List from './elements/List';
 import Forms from './elements/Forms';
+import { HideAndShow } from './elements/HideAndShow';
+import { DarkMode } from './elements/DarkMode';
 
 const App = () => {
 
@@ -14,6 +16,8 @@ const App = () => {
         <Route path="counter" element={<Counter />} />
         <Route path="list" element={<List />} />
         <Route path="forms" element={<Forms />} />
+        <Route path="hideandshow" element={<HideAndShow />} />
+        <Route path="darkmode" element={<DarkMode />} />
       </Routes>
     </BrowserRouter>
   );

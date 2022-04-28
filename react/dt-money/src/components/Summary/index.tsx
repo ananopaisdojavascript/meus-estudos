@@ -1,15 +1,15 @@
-import { Container } from "./styles";
-import Entradas from '../../assets/Entradas.svg';
-import Saídas from '../../assets/Saídas.svg';
-import Total from '../../assets/Total.svg';
+import { Container } from "./styles"
+import income from '../../assets/income.svg';
+import outcome from '../../assets/outcome.svg';
+import total from '../../assets/total.svg';
 
-export function Summary() {
+export const Summary = () => {
     return (
         <Container>
             <div>
                 <header>
                     <p>Entradas</p>
-                    <img src={Entradas} alt="ícone de entrada" />
+                    <img src={income} alt="Entrada" />
                 </header>
                 <strong>R$1000,00</strong>
             </div>
@@ -17,17 +17,17 @@ export function Summary() {
             <div>
                 <header>
                     <p>Saídas</p>
-                    <img src={Saídas} alt="ícone de saída" />
+                    <img src={outcome} alt="Saída" />
                 </header>
-                <strong>- R$200,00</strong>
+                <strong>- R$500,00</strong>
             </div>
 
-            <div className="highlight">
+            <div className="highlight-background">
                 <header>
                     <p>Total</p>
-                    <img src={Total} alt="ícone de total" />
+                    <img src={total} alt="Total" />
                 </header>
-                <strong>R$800,00</strong>
+                <strong>R$500,00</strong>
             </div>
         </Container>
     )

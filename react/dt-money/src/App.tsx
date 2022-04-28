@@ -1,15 +1,16 @@
-import React from "react";
-import { Dashboard } from "./components/Dashboard";
-import { Header } from "./components/Header";
-import { GlobalStyle } from "./styles/styles"
+import React from 'react';
+import { Header } from './components/Header';
+import { Dashboard } from './components/Dashboard';
+import GlobalStyle  from './styles/global';
 
-
-export function App() {
+const App = () => {
   return (
-    <React.Fragment>
+    <div className="App">
       <GlobalStyle/>
       <Header/>
       <Dashboard/>
-    </React.Fragment>
+    </div>
   );
 }
+
+export default App;

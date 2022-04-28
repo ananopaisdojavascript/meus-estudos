@@ -1,12 +1,12 @@
-import { Summary } from "../Summary";
-import { Transactions } from "../Transactions";
-import { Container } from "./styles";
+import { Summary } from "../Summary"
+import { TransactionsTable } from "../TransactionsTable"
+import { Container } from "./styles"
 
-export function Dashboard() {
+export const Dashboard = () => {
     return (
         <Container>
             <Summary/>
-            <Transactions/>
+            <TransactionsTable />
         </Container>
     )
 }
