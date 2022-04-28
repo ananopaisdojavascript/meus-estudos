@@ -6,6 +6,7 @@ import List from './elements/List';
 import Forms from './elements/Forms';
 import { HideAndShow } from './elements/HideAndShow';
 import { DarkMode } from './elements/DarkMode';
+import { Modal } from './elements/modal/Modal';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="forms" element={<Forms />} />
         <Route path="hideandshow" element={<HideAndShow />} />
         <Route path="darkmode" element={<DarkMode />} />
+        <Route path="modal" element={<Modal />} />
       </Routes>
     </BrowserRouter>
   );
