@@ -1,0 +1,18 @@
+{
+    "transctions": [
+        {
+            "id": 1,
+            "title": "Desenvolvimento de website",
+            "value": 10000,
+            "category": "Entrada",
+            "createdAt": "20/01/2021"
+        },
+        {
+            "id": 2,
+            "title": "Aluguel",
+            "value": 500,
+            "category": "Saída",
+            "createdAt": "22/01/2021"
+        }
+    ]
+}

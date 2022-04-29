@@ -1,38 +1,29 @@
-import { useEffect } from "react"
-import { Container } from "./styles"
-import { api } from '../../services/api';
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { Container, TransactionContainer } from "./styles"
 
 export const TransactionsTable = () => {
+    const url = 'http://localhost:5000/transctions';
+    const [transactions, setTransactions] = useState<any[]>([]);
+    const fetchData = async () => {
+        const { data } = await axios.get(url)
+        setTransactions(data);
+    }
+
     useEffect(() => {
-        api.get(`transactions`)
-        .then(response => console.log(response.data))
+        fetchData();
     }, [])
+
     return (
         <Container>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Valor</th>
-                        <th>Categoria</th>
-                        <th>Data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Desenvolvimento de Website</td>
-                        <td className="deposit">R$10.000,00</td>
-                        <td>Desenvolvimento</td>
-                        <td>20/02/2021</td>
-                    </tr>
-                    <tr>
-                        <td>Aluguel</td>
-                        <td className="withdraw">- R$500,00</td>
-                        <td>Casa</td>
-                        <td>21/02/2021</td>
-                    </tr>
-                </tbody>
-            </table>
+            {transactions.map(transaction => (
+                <TransactionContainer>
+                    <p>{transaction.title}</p>
+                    <p>{transaction.value}</p>
+                    <p>{transaction.category}</p>
+                    <p>{transaction.createdAt}</p>
+                </TransactionContainer>
+            ))}
         </Container>
     )
 }

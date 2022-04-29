@@ -2,19 +2,39 @@
     "people": [
         {
             "id": 1,
-            "name": "Jennie"
+            "name": "Choi Yujin",
+            "country": "South Korea",
+            "MBTI": "ENFP"
         },
         {
             "id": 2,
-            "name": "Yuna"
+            "name": "Ezaki Hikaru",
+            "country": "Japan",
+            "MBTI": "ESFJ"
         },
         {
             "id": 3,
-            "name": "JiHyo"
+            "name": "Fu Ya Ning",
+            "country": "China",
+            "MBTI": "ENTJ"
         },
         {
             "id": 4,
-            "name": "Yoongi"
+            "name": "Kim Dayeon",
+            "country": "South Korea",
+            "MBTI": "ESTP"
+        },
+        {
+            "id": 5,
+            "name": "Kawaguchi Yurina",
+            "country": "Japan",
+            "MBTI": "ESFJ"
+        },
+        {
+            "id": 6,
+            "name": "Cai Bing",
+            "country": "China",
+            "MBTI": "ESFJ"
         }
     ]
 }
