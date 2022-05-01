@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+:root[theme=dark] {
+  --theme-background: #222226;
+  --theme-color: rgba(255,255,255,.75);
+}
+
+:root {
+  --theme-background: white;
+  --theme-color: black;
+}
+
+

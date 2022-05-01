@@ -1,0 +1,15 @@
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  transition: all ease-in-out 400ms;
+}

@@ -1,0 +1,6 @@
+  <main [class.dark]="isDarkModeActivated" [class.light]="!isDarkModeActivated">
+    <h1>{{ title }}</h1>
+
+    <button (click)="openDarkMode()" *ngIf="isDarkButtonActivated">Modo Escuro</button>
+    <button (click)="closeDarkMode()" *ngIf="isLightButtonActivated">Modo Claro</button>
+  </main>
