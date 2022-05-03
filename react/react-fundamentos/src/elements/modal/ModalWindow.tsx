@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import ReactDOM from "react-dom";
 import { ModalBody, ModalClose, ModalContent, ModalFooter, ModalHeader, ModalStyle } from "./modalStyle"
 
-export const ModalWindow = ({closeModal}:any) => {
-    const close = () => closeModal(false);
-    return (
-        <ModalStyle>
+export const ModalWindow = (props: any) => {
+    const { show, closeModal } = props;
+    const modal = (
+        <div className={show ? "overlay" : "hide"} onClick={closeModal}>
+        <ModalStyle {...show ? "modal" : "hide"}>
             <ModalContent>
                 <ModalHeader>
-                    <ModalClose onClick={close}>&times;</ModalClose>
+                    <ModalClose onClick={closeModal}>&times;</ModalClose>
                     <h2>Modal Header</h2>
                 </ModalHeader>
                 <ModalBody>
@@ -19,5 +21,7 @@ export const ModalWindow = ({closeModal}:any) => {
                 </ModalFooter>
             </ModalContent>
         </ModalStyle>
+        </div>
     )
+    return ReactDOM.createPortal(modal, document.getElementById("modal-root"));
 }

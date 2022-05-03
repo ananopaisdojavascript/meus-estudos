@@ -2,12 +2,15 @@ import { useState } from 'react';
 import { ModalWindow } from './ModalWindow';
 
 export const Modal = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const open = () => setOpenModal(true);
+    
+    const [show, setShow] = useState(false);
+    const openModal = () => setShow(true);
+    const closeModal = () => setShow(false);
+
     return (
         <div>
-            <button onClick={open}>Abrir Modal</button> 
-            {openModal && <ModalWindow closeModal={setOpenModal}/>}
+            {!show && <button onClick={openModal}>Abrir Modal</button>}
+            <ModalWindow closeModal={closeModal} show={show}/>
         </div>
     )
 }
