@@ -1,0 +1,90 @@
+// strings
+console.log('Oi gente!')
+
+const email = 'laracroft@email.com'
+
+console.log(email)
+
+// concatenação de strings
+const firstName = 'Lara'
+const lastName = 'Croft'
+const fullName = firstName + ' ' + lastName
+
+console.log(fullName)
+
+// acessando caracteres
+console.log(fullName[0])
+
+// comprimento de uma string
+console.log(fullName.length)
+
+// métodos de string
+console.log(fullName.toUpperCase())
+const result = fullName.toLowerCase()
+console.log(result)
+
+const index = email.indexOf('@') 
+
+// métodos comuns de strings
+
+const lastIndexOfA = email.lastIndexOf('a')
+console.log(lastIndexOfA)
+
+const emailSlice = email.slice(0, 9)
+
+const emailReplace = email.replace('l', 'y')
+
+console.log(emailReplace)
+
+// inteiros e decimais
+const radius = 10
+const pi = 3.14
+
+
+// operadores aritméticos
+const area = pi * radius ** 2
+
+// ordem de operações
+const crazyOperation = 5 * (10 - 3) ** 2
+
+// operadores de incremento e decremento
+let postLikes = 10
+console.log(postLikes++)
+console.log(postLikes--)
+
+// operadores adição, subtração, multiplicação e divisão - assignment
+postLikes += 20
+postLikes -= 5
+postLikes *= 20
+postLikes /= 2
+
+// NaN - not a number
+
+console.log(7 / 'oi')
+
+// concatenção de string com número
+console.log('Esse post tem ' + postLikes + ' likes.')
+
+const postTitle = 'É bolacha ou biscoito?'
+const postAuthor = 'Mateus Saad'
+const postComments = 15
+
+// usando concatenação
+// const postMessage = 'O post "' + postTitle + '", de ' + postAuthor + ', tem ' + postComments + ' comentários'
+
+console.log(postMessage)
+
+// console.log('Você já viu o filme "As Branquelas"?')
+// console.log("Você já viu o filme 'As Branquelas?'")
+// console.log('Você já viu o filme \'As Branquelas\'?')
+
+// usando template strings
+const postMessage = `O post "${postTitle}", de ${postAuthor}, tem ${postComments} comentários.`
+
+// criando templates HTML
+const html = `
+    <h2>${postTitle}</h2>
+    <p>Autor: ${postAuthor}</p>
+    <span>Esse post tem ${postComments} comentários.</span>
+`
+console.log(html)
