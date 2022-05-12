@@ -13,9 +13,9 @@
 
 const my3FavoriteTVShows = ['Friends', 'Sex And The City', 'The X Files']
 
-const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.slice(0, 1)}, ${my3FavoriteTVShows.slice(1, 2)} e ${my3FavoriteTVShows.slice(-1)}.`
+const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ').replace(', T', ' e T')}.`
 
-// console.log(sentence);
+console.log(sentence);
 /*
   02 - Comente o console.log() acima e:
   - Exiba no console um boolean indicando se o array de séries que você criou  
@@ -65,10 +65,9 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
 */
 
 const sentenceLength = 39;
-const booleanConversion = Boolean('BOOLEAN')
 
-// console.log(`A string que a "typeSentence" armazena tem mais de ${sentenceLength}  
-// caracteres? ${booleanConversion}.`);
+console.log(`A string que a "typeSentence" armazena tem mais de ${sentenceLength}  
+caracteres? ${String(typeSentence.length > sentenceLength).replace('t', 'T')}.`);
 
 /*
   06 - Comente o console.log() acima e:
@@ -115,7 +114,7 @@ const ages = [31, 82, 61, 11]
 const agesSum = ages[0] + ages[2]
 
 // console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  
-// é: ${agesSum >= 92}.`);
+// é: ${agesSum <= 92}.`);
 
 /*
   09 - Comente o console.log() acima e:
@@ -138,4 +137,4 @@ const isNotAString = typeof randomTVShow !== 'string';
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
 
-console.log(evenNumbers[4] === 8);
+// console.log(evenNumbers.indexOf(8) !== -1);
