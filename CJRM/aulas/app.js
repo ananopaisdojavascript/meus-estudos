@@ -124,3 +124,34 @@ console.log(popHeroes)
 
 let emptiness = null
 console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
+
+// booleanos e comparações
+
+console.log(true, false)
+
+// métodos podem retornar booleanos
+
+const email = 'brucewayne@email.com.br'
+const includes = email.includes('@')
+console.log(includes)
+const names = ['dio', 'roger', 'robert']
+const arrayIncludes = names.includes('robert')
+console.log(arrayIncludes)
+
+// operadores de comparação
+
+const age = 31
+
+console.log(age == 31)
+console.log(age == 35)
+console.log(age != 35)
+console.log(age != 31)
+console.log(age > 30)
+console.log(age > 31)
+console.log(age < 31)
+console.log(age <= 31)
+console.log(age >= 31)
+
+const name = 'roger'
+console.log(name == 'roger')
+console.log(name == 'Roger')
