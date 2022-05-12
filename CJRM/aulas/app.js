@@ -116,3 +116,11 @@ console.log(pushToHeroes)
 
 const popHeroes = heroes.pop()
 console.log(popHeroes)
+
+// null e undefined
+
+// let emptiness;
+// console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
+
+let emptiness = null
+console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
