@@ -88,3 +88,31 @@ const html = `
     <span>Esse post tem ${postComments} comentários.</span>
 `
 console.log(html)
+
+// arrays ou vetores
+
+let heroes = ['Batman', 'Catwoman', 'Iron Man']
+console.log(heroes[0])
+
+heroes[2] = 'Spider-Man'
+
+const ages = [31, 25, 39, 40, 25]
+console.log(ages[2])
+
+// métodos de arrays
+
+console.log(heroes.length)
+const joinHeroes = heroes.join(' , ')
+console.log(joinHeroes)
+
+const indexOf25 = ages.indexOf(25)
+console.log(indexOf25)
+
+const heroesConcat = heroes.concat(['Superman', 'Woverine'])
+console.log(heroesConcat)
+
+const pushToHeroes = heroes.push('Cyclops', 'Hulk')
+console.log(pushToHeroes)
+
+const popHeroes = heroes.pop()
+console.log(popHeroes)
