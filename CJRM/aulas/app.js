@@ -155,3 +155,14 @@ console.log(age >= 31)
 const name = 'roger'
 console.log(name == 'roger')
 console.log(name == 'Roger')
+
+// exatamente igual a e exatamente diferente de
+
+console.log(age == 31)
+console.log(age == '31')
+
+console.log(age === 31)
+console.log(age === '31')
+
+console.log(age !== 31)
+console.log(age !== '31')
