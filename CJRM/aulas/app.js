@@ -1,9 +1,9 @@
 // strings
 console.log('Oi gente!')
 
-const email = 'laracroft@email.com'
+// const email = 'laracroft@email.com'
 
-console.log(email)
+// console.log(email)
 
 // concatenação de strings
 const firstName = 'Lara'
