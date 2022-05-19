@@ -185,3 +185,25 @@ const booleanConversion = Boolean(10)
 console.log(booleanConversion)
 
 console.log(Boolean(0))
+
+// for loop
+
+for(let i = 0; i < 5; i++) {
+    console.log(`Dentro do loop: ${i }`)
+}
+
+const namesArray = ['Linus', 'Ada', 'Bill']
+
+for(let i = 0; i < namesArray.length; 1++) {
+    const HTMLTemplate = `<p>${namesArray[i]}</p>`
+    console.log(HTMLTemplate)
+}
+
+// while loop
+
+let i = 0
+
+while(i < 5) {
+    console.log(`Dentro do loop: ${i }`)
+    i++
+}
