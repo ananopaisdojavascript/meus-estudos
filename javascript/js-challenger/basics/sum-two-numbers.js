@@ -2,7 +2,8 @@
 // Sum a and b
 // Return the result
 
+const myFunction = (a, b) => a + b
 
-console.log()
-console.log()
-console.log()
+console.log(myFunction(1,2))
+console.log(myFunction(1,10))
+console.log(myFunction(99,1))
