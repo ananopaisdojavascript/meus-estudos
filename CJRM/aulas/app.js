@@ -207,3 +207,41 @@ while(i < 5) {
     console.log(`Dentro do loop: ${i }`)
     i++
 }
+
+// if, else if e if else
+
+const idade = 18
+
+if (idade > 18) {
+    console.log('Você tem mais de 18 anos')
+}
+
+const simpsons = ['Marge', 'Homer', 'Lisa', 'Bart']
+
+if (simpsons.length >= 3) {
+    console.log('Esse vetor tem vários personagens')
+}
+
+const senha = 'oi123'
+
+// if (senha.length >= 8) {
+//     console.log('Essa senha tem 8 ou mais caracteres')
+// } else {
+//     console.log('Essa senha precisa ter 8 ou mais caracteres')
+// }
+
+// if (senha.length >= 12) {
+//     console.log('Essa senha é muito forte')
+// } else if (senha.length >= 8) {
+//     console.log('Essa senha tem 8 ou mais caracteres')
+// } else {
+//     console.log('Essa senha precisa ter 8 ou mais caracteres')
+// }
+
+if (senha.length >= 12 && senha.includes('1')) {
+    console.log('Essa senha é muito forte')
+} else if (senha.length >= 8 || senha.includes('1')) {
+    console.log('Essa senha tem 8 ou mais caracteres')
+} else {
+    console.log('Essa senha precisa ter 8 ou mais caracteres')
+}
