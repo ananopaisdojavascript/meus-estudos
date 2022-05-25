@@ -222,7 +222,7 @@ if (simpsons.length >= 3) {
     console.log('Esse vetor tem vários personagens')
 }
 
-const senha = 'oi123'
+// const senha = 'oi123'
 
 // if (senha.length >= 8) {
 //     console.log('Essa senha tem 8 ou mais caracteres')
