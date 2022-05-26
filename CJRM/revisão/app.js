@@ -224,3 +224,58 @@ inteiros e positivos
 // for(let i = 1; i <= 10; i++) {
 //     console.log(i)
 // }
+
+/**
+ * Crie um vetor que contenha os seguintes nomes: 
+ * “André”, “Ana Paula”, “Júlio”, “Marcela”, “Rubem”. 
+ * Utilize o laço de repetição FOR para percorrer 
+ * esta lista. Quando a leitura for igual a “Júlio”, 
+ * utilize o comando `continue`. Ele irá exibir todos 
+ * os outros nomes deste vetor. Utilize o `console.log` 
+ * para logar os dados no console.
+ */
+
+const nomes = ["André", "Ana Paula", "Júlio", "Marcela", "Rubem"]
+for (let i = 0; i < nomes.length; i++) {
+    if(nomes[i] === "Júlio") {
+        continue
+    }
+    // console.log(nomes[i])
+}
+
+/**
+ * Use o `continue` no laço a seguir para mostrar 
+ * apenas os números ímpares no console.
+ */
+
+for (let i = 0; i <= 20; i++) {
+    if (i % 2 === 0) {
+        continue
+    }
+    // console.log(i)
+}
+
+/**
+ * Use o `continue` no mesmo laço para mostrar 
+ * apenas os números pares no console.
+ */
+
+for (let i = 0; i <= 20; i++) {
+    if (i % 2 !== 0) {
+        continue
+    }
+    // console.log(i)
+}
+
+/**
+ * Escreva um programa que imprima todos 
+ * os números de 1 a 20, menos o número 13.
+ */
+
+for (let i = 1; i <= 20; i++) {
+    if (i === 13) {
+        continue
+    }
+    // console.log(i)
+}
+
