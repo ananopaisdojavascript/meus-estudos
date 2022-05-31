@@ -279,38 +279,3 @@ for (let i = 1; i <= 20; i++) {
     // console.log(i)
 }
 
-/**
- * Elabore um algoritmo que mostre os múltiplos de 5
-entre zero e um mil Exibindo ao final o somatório desses
-números
- */
-
-/**
- * Crie um algoritmo que o usuário entre com vários números 
- * inteiros e positivos e imprima o produto dos números ímpares 
- * e a soma dos números pares.
- */
-
-/**
- * Escreva um algoritmo que leia dois números fornecidos pelo usuário e, 
- * conforme o valor deles, exiba uma das seguintes mensagens: 
- * “O primeiro número informado é o maior”, “O segundo número é o maior” 
- * ou “Ambos os números são iguais”.
- */
-
-/**
- * Leia o código de um determinado produto e mostre sua classificação. 
- * Utilize a seguinte tabela como referência:
- * 
- * Código 1 - Alimento não-perecível
- * Código 2, 3 ou 4 - Alimento perecível
- * Código 5 ou 6 - Vestuário
- * Código 7 - Higiene Pessoal
- * Código 8 até 15 - Limpeza e Utensílios Domésticos
- * Qualquer outro código - Código inválido
- * (use switch) 
- */
-
-/**
- * 
- */

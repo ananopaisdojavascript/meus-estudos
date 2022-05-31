@@ -1,5 +1,5 @@
 // strings
-console.log('Oi gente!')
+// console.log('Oi gente!')
 
 // const email = 'laracroft@email.com'
 
@@ -10,31 +10,31 @@ const firstName = 'Lara'
 const lastName = 'Croft'
 const fullName = firstName + ' ' + lastName
 
-console.log(fullName)
+// console.log(fullName)
 
 // acessando caracteres
-console.log(fullName[0])
+// console.log(fullName[0])
 
 // comprimento de uma string
-console.log(fullName.length)
+// console.log(fullName.length)
 
 // métodos de string
-console.log(fullName.toUpperCase())
+// console.log(fullName.toUpperCase())
 const result = fullName.toLowerCase()
-console.log(result)
+// console.log(result)
 
-const index = email.indexOf('@') 
+// const index = email.indexOf('@') 
 
 // métodos comuns de strings
 
-const lastIndexOfA = email.lastIndexOf('a')
-console.log(lastIndexOfA)
+// const lastIndexOfA = email.lastIndexOf('a')
+// console.log(lastIndexOfA)
 
-const emailSlice = email.slice(0, 9)
+// const emailSlice = email.slice(0, 9)
 
-const emailReplace = email.replace('l', 'y')
+// const emailReplace = email.replace('l', 'y')
 
-console.log(emailReplace)
+// console.log(emailReplace)
 
 // inteiros e decimais
 const radius = 10
@@ -48,22 +48,22 @@ const area = pi * radius ** 2
 const crazyOperation = 5 * (10 - 3) ** 2
 
 // operadores de incremento e decremento
-let postLikes = 10
-console.log(postLikes++)
-console.log(postLikes--)
+// let postLikes = 10
+// console.log(postLikes++)
+// console.log(postLikes--)
 
 // operadores adição, subtração, multiplicação e divisão - assignment
-postLikes += 20
-postLikes -= 5
-postLikes *= 20
-postLikes /= 2
+// postLikes += 20
+// postLikes -= 5
+// postLikes *= 20
+// postLikes /= 2
 
 // NaN - not a number
 
-console.log(7 / 'oi')
+// console.log(7 / 'oi')
 
 // concatenção de string com número
-console.log('Esse post tem ' + postLikes + ' likes.')
+// console.log('Esse post tem ' + postLikes + ' likes.')
 
 const postTitle = 'É bolacha ou biscoito?'
 const postAuthor = 'Mateus Saad'
@@ -72,7 +72,7 @@ const postComments = 15
 // usando concatenação
 // const postMessage = 'O post "' + postTitle + '", de ' + postAuthor + ', tem ' + postComments + ' comentários'
 
-console.log(postMessage)
+// console.log(postMessage)
 
 // console.log('Você já viu o filme "As Branquelas"?')
 // console.log("Você já viu o filme 'As Branquelas?'")
@@ -87,35 +87,35 @@ const html = `
     <p>Autor: ${postAuthor}</p>
     <span>Esse post tem ${postComments} comentários.</span>
 `
-console.log(html)
+// console.log(html)
 
 // arrays ou vetores
 
 let heroes = ['Batman', 'Catwoman', 'Iron Man']
-console.log(heroes[0])
+// console.log(heroes[0])
 
 heroes[2] = 'Spider-Man'
 
 const ages = [31, 25, 39, 40, 25]
-console.log(ages[2])
+// console.log(ages[2])
 
 // métodos de arrays
 
-console.log(heroes.length)
+// console.log(heroes.length)
 const joinHeroes = heroes.join(' , ')
-console.log(joinHeroes)
+// console.log(joinHeroes)
 
 const indexOf25 = ages.indexOf(25)
-console.log(indexOf25)
+// console.log(indexOf25)
 
 const heroesConcat = heroes.concat(['Superman', 'Woverine'])
-console.log(heroesConcat)
+// console.log(heroesConcat)
 
 const pushToHeroes = heroes.push('Cyclops', 'Hulk')
-console.log(pushToHeroes)
+// console.log(pushToHeroes)
 
 const popHeroes = heroes.pop()
-console.log(popHeroes)
+// console.log(popHeroes)
 
 // null e undefined
 
@@ -123,104 +123,104 @@ console.log(popHeroes)
 // console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
 
 let emptiness = null
-console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
+// console.log(emptiness, emptiness + 3, `O valor é ${emptiness}`)
 
 // booleanos e comparações
 
-console.log(true, false)
+// console.log(true, false)
 
 // métodos podem retornar booleanos
 
-const email = 'brucewayne@email.com.br'
-const includes = email.includes('@')
-console.log(includes)
-const names = ['dio', 'roger', 'robert']
-const arrayIncludes = names.includes('robert')
-console.log(arrayIncludes)
+// const email = 'brucewayne@email.com.br'
+// const includes = email.includes('@')
+// console.log(includes)
+// const names = ['dio', 'roger', 'robert']
+// const arrayIncludes = names.includes('robert')
+// console.log(arrayIncludes)
 
 // operadores de comparação
 
-const age = 31
+// const age = 31
 
-console.log(age == 31)
-console.log(age == 35)
-console.log(age != 35)
-console.log(age != 31)
-console.log(age > 30)
-console.log(age > 31)
-console.log(age < 31)
-console.log(age <= 31)
-console.log(age >= 31)
+// console.log(age == 31)
+// console.log(age == 35)
+// console.log(age != 35)
+// console.log(age != 31)
+// console.log(age > 30)
+// console.log(age > 31)
+// console.log(age < 31)
+// console.log(age <= 31)
+// console.log(age >= 31)
 
-const name = 'roger'
-console.log(name == 'roger')
-console.log(name == 'Roger')
+// const name = 'roger'
+// console.log(name == 'roger')
+// console.log(name == 'Roger')
 
 // exatamente igual a e exatamente diferente de
 
-console.log(age == 31)
-console.log(age == '31')
+// console.log(age == 31)
+// console.log(age == '31')
 
-console.log(age === 31)
-console.log(age === '31')
+// console.log(age === 31)
+// console.log(age === '31')
 
-console.log(age !== 31)
-console.log(age !== '31')
+// console.log(age !== 31)
+// console.log(age !== '31')
 
 // conversão de tipos
 
-let score = '100'
-score = Number(score)
-console.log(score + 1)
+// let score = '100'
+// score = Number(score)
+// console.log(score + 1)
 
-console.log(typeof score)
+// console.log(typeof score)
 
-const crazyConversion = Number('Maçã')
-console.log(crazyConversion)
+// const crazyConversion = Number('Maçã')
+// console.log(crazyConversion)
 
-const convertedNumber = String(97)
-console.log(convertedNumber)
+// const convertedNumber = String(97)
+// console.log(convertedNumber)
 
-const booleanConversion = Boolean(10)
-console.log(booleanConversion)
+// const booleanConversion = Boolean(10)
+// console.log(booleanConversion)
 
-console.log(Boolean(0))
+// console.log(Boolean(0))
 
 // for loop
 
-for(let i = 0; i < 5; i++) {
-    console.log(`Dentro do loop: ${i }`)
-}
+// for(let i = 0; i < 5; i++) {
+//     console.log(`Dentro do loop: ${i }`)
+// }
 
-const namesArray = ['Linus', 'Ada', 'Bill']
+// const namesArray = ['Linus', 'Ada', 'Bill']
 
-for(let i = 0; i < namesArray.length; 1++) {
-    const HTMLTemplate = `<p>${namesArray[i]}</p>`
-    console.log(HTMLTemplate)
-}
+// for(let i = 0; i < namesArray.length; 1++) {
+//     const HTMLTemplate = `<p>${namesArray[i]}</p>`
+//     console.log(HTMLTemplate)
+// }
 
 // while loop
 
-let i = 0
+// let i = 0
 
-while(i < 5) {
-    console.log(`Dentro do loop: ${i }`)
-    i++
-}
+// while(i < 5) {
+//     // console.log(`Dentro do loop: ${i }`)
+//     i++
+// }
 
 // if, else if e if else
 
-const idade = 18
+// const idade = 18
 
-if (idade > 18) {
-    console.log('Você tem mais de 18 anos')
-}
+// if (idade > 18) {
+//     // console.log('Você tem mais de 18 anos')
+// }
 
-const simpsons = ['Marge', 'Homer', 'Lisa', 'Bart']
+// const simpsons = ['Marge', 'Homer', 'Lisa', 'Bart']
 
-if (simpsons.length >= 3) {
-    console.log('Esse vetor tem vários personagens')
-}
+// if (simpsons.length >= 3) {
+//     // console.log('Esse vetor tem vários personagens')
+// }
 
 // const senha = 'oi123'
 
@@ -238,10 +238,33 @@ if (simpsons.length >= 3) {
 //     console.log('Essa senha precisa ter 8 ou mais caracteres')
 // }
 
-if (senha.length >= 12 && senha.includes('1')) {
-    console.log('Essa senha é muito forte')
-} else if (senha.length >= 8 || senha.includes('1')) {
-    console.log('Essa senha tem 8 ou mais caracteres')
-} else {
-    console.log('Essa senha precisa ter 8 ou mais caracteres')
+// if (senha.length >= 12 && senha.includes('1')) {
+//     console.log('Essa senha é muito forte')
+// } else if (senha.length >= 8 || senha.includes('1')) {
+//     console.log('Essa senha tem 8 ou mais caracteres')
+// } else {
+//     console.log('Essa senha precisa ter 8 ou mais caracteres')
+// }
+
+// Function declaration
+function sayHi() {
+    console.log("Oi")
 }
+
+// sayHi()
+
+// Function expression
+
+const showFood = function() {
+    console.log("pizza")
+}
+
+// showFood( )
+
+// Argumentos, parâmetros e default parameters (parâmetros padrão)
+
+const myFunc = function(name = 'Antonio', lastName = 'Almeida') {
+    console.log(`Oi ${name} ${lastName}!`)
+}
+
+myFunc()
