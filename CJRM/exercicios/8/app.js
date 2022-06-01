@@ -6,12 +6,24 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 
+// function mult (num1, num2) {
+//     return num1 * num2
+// }
+
+// console.log(mult(5, 10))
+
 /*
   02
   - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
+
+const divide = function (num1, num2) {
+    return num1 / num2
+}
+
+// console.log(divide(10, 5))
 
 /*
   03
@@ -23,6 +35,14 @@
   - Não repita (manualmente) a invocação da função ou do console.log().
   "Esta é a Xª vez que essa string é exibida."
 */
+
+// const sayHi = function(hi = "Oi") {
+//     return console.log(hi);
+// }
+
+// for(let i = 1; i <= 7; i++) {
+//     sayHi(`Essa é a ${i}ª vez que essa string é exibida.`)
+// }
 
 /*
   04
@@ -36,6 +56,19 @@
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
+const millenialCapitalWords = function(array = []) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        const upperCaseWords = array[i].toUpperCase()
+        newArray.push(upperCaseWords)
+    }
+
+    return newArray;
+}
+
+const millenialCapital = millenialCapitalWords(millennialWords)
+// console.log(millenialCapital)
+
 /*
   05
   - Implemente uma função que retorna se um número é positivo;
@@ -47,6 +80,25 @@ const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influenc
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
+let totalPositiveNumbers = 0
+let totalNegativeNumbers = 0
+
+const isThisNumberPositive = function(number) {
+    return number > 0
+}
+
+for(let i = 0; i < randomNumbers.length; i++) {
+    let numbers = randomNumbers[i]
+    let positive = isThisNumberPositive(numbers)
+    if(positive) {
+        totalPositiveNumbers++
+    } else {
+        totalNegativeNumbers++
+    }
+}
+
+// console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${totalPositiveNumbers} positivos e ${totalNegativeNumbers} negativos.`)
+
 /*
   06
   - Descomente a invocação da função abaixo e implemente-a;
@@ -56,7 +108,21 @@ const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
     função.
 */
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+const getOddNumbers = function(array) {
+    newArray = []
+    for (let i = 0; i < array.length; i++) {
+        const number = array[i]
+        const verifyOdd = number % 2 === 1
+        if(verifyOdd) {
+            newArray.push(number)
+        }
+    }
+
+    return newArray
+}
+
+const showOddNumbers = getOddNumbers ([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+console.log(showOddNumbers)
 
 /*
   07
@@ -149,3 +215,12 @@ const functions = [
         return 'Ocidentais.'
     }
 ]
+
+let sentence = ''
+
+for(let i = 0; i < functions.length; i++) {
+    const string = `${functions[i]()} `
+    sentence += string
+}
+
+console.log(sentence)
