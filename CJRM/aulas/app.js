@@ -267,4 +267,12 @@ const myFunc = function(name = 'Antonio', lastName = 'Almeida') {
     console.log(`Oi ${name} ${lastName}!`)
 }
 
-myFunc()
+// myFunc()
+
+// return
+
+const double = function(number) {
+    return number * 2
+}
+
+console.log(double(4))
