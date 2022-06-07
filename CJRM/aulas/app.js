@@ -343,4 +343,18 @@ const numbers = [53, 41, 85, 25, 94, 70, 16, 59, 65, 6, 43, 47, 100, 79, 3, 33, 
 Dentro do método há uma função com um determinado
 parâmetro (number) que será aplicada a todos os valores do vetor 'numbers'
 */
-numbers.forEach(number => console.log(number))
+// numbers.forEach(number => console.log(number))
+
+// Uso de callbacks
+
+const ul = document.querySelector('[data-js="ul"]')
+
+const socialNetworks = ['YouTube', 'Instagram', 'Twitter']
+
+let template = ''
+
+socialNetworks.forEach(element => {
+    template += `<li>${element}</li>`
+})
+
+ul.innerHTML = template
