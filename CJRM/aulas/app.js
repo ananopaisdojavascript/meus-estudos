@@ -275,4 +275,72 @@ const double = function(number) {
     return number * 2
 }
 
-console.log(double(4))
+// console.log(double(4))
+
+// Função de callback
+
+/*
+    Criar duas funções: uma que verifique quais números
+    são ímpares e outra que verifique os números pares
+*/
+
+const isThisNumberOdd = (number) => number % 2 === 1
+const isThisNumberEven = (number) => number % 2 === 0
+
+/*
+    Atualizar a nossa função de filtragem de números
+    ímpares com mais um parâmetro
+*/
+
+const filter = (numbers, callback) => {
+    // Criar um vetor para colocar os números ímpares ou pares
+    const results = []
+    // Criar um laço para percorrer os números e 
+    // colocar os valores ímpares ou pares no novo vetor
+    for (let i = 0; i < numbers.length; i++) {
+        const value = numbers[i]
+        /**
+         * Chamada do parâmetro 'callback' que refere-se
+         * à função 'isThisNumberOdd' ou 'isThisNumberEven' declaradas
+         * anteriormente. O parâmetro da função 'callback'
+         * será a constante 'value' cujos valores são
+         * os números percorridos no vetor.
+         */
+        if (callback(value)) {
+            results.push(value)
+        }
+    }
+    // Retornar o vetor com os números ímpares ou pares
+    return results
+}
+
+// Criar um vetor com números aleatórios
+const numbers = [53, 41, 85, 25, 94, 70, 16, 59, 65, 6, 43, 47, 100, 79, 3, 33, 93, 90, 56, 13]
+/**
+ * Chamar a função 'filter' com dois argumentos:
+ * O primeiro argumento é o vetor de números que criamos ('numbers')
+ * O segundo argumento é a função que verifica se os números
+ * do vetor 'numbers' são ímpares ('isThisNumberOdd') ou pares ('isThisNumberEven').
+ */
+// console.log(filter(numbers, isThisNumberOdd)) // isThisNumberOdd é a função de callback
+// console.log(filter(numbers, isThisNumberEven)) // isThisNumberEven também é a função de callback
+
+// forEach
+
+/**
+ * Vamos usar o mesmo vetor criado para as funções de callback
+ */
+
+// Laço for regular
+
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i])
+// }
+
+// Laço forEach
+
+/*
+Dentro do método há uma função com um determinado
+parâmetro (number) que será aplicada a todos os valores do vetor 'numbers'
+*/
+numbers.forEach(number => console.log(number))
