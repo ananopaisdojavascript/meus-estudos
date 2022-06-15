@@ -61,10 +61,11 @@ const best2019Movies = [{
     }
 ]
 
-// console.log(`Segundo o site Omelete, os melhores filmes de 2019 são:`)
-// best2019Movies.forEach(movie => {
-//   return console.log(`- ${movie.title}, dirigido por ${movie.directedBy}`)
-// })
+let sentence = `Segundo o site Omelete, os melhores filmes de 2019 são:`
+best2019Movies.forEach(movie => {
+  sentence += `
+  - ${movie.title}, dirigido por ${movie.directedBy}`
+})
 
 /*
   02
@@ -106,7 +107,7 @@ const youtubeUser = {
         country: 'Brasil'
     },
     showVideoTitle() {
-      console.log("Vídeos recentes de Roger Melo:")
+      console.log(`Vídeos recentes de ${this.name}:`)
       this.videos.recentVideos.forEach(video => console.log(`${video.title}`))
     }
 }

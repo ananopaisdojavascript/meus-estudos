@@ -53,13 +53,13 @@ let car = {
   colors: ["preto", "branco", "prata"],
   isRunning: false,
   run() {
-    if(!this.isRunning === true) console.log(`O ${this.name} está em movimento`)
+    if(!this.isRunning) console.log(`O ${this.name} está em movimento`)
   },
   stop() {
-    if(this.isRunning === false) console.log(`O ${this.name} está parado`)
+    if(this.isRunning) console.log(`O ${this.name} está parado`)
   },
   getColorsMessage() {
-    console.log(`O ${this.name} está disponível nas cores ${this.colors[0]}, ${this.colors[1]} e ${this.colors[2]}`)
+    return console.log(`O ${this.name} está disponível nas cores ${this.colors[0]}, ${this.colors[1]} e ${this.colors[2]}`)
   }
 }
 
