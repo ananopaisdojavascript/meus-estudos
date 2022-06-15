@@ -61,6 +61,11 @@ const best2019Movies = [{
     }
 ]
 
+// console.log(`Segundo o site Omelete, os melhores filmes de 2019 são:`)
+// best2019Movies.forEach(movie => {
+//   return console.log(`- ${movie.title}, dirigido por ${movie.directedBy}`)
+// })
+
 /*
   02
   - No objeto abaixo, implemente um método que exibe a seguinte mensagem no 
@@ -99,15 +104,21 @@ const youtubeUser = {
             gitHub: 'https://github.com/Roger-Melo'
         },
         country: 'Brasil'
+    },
+    showVideoTitle() {
+      console.log("Vídeos recentes de Roger Melo:")
+      this.videos.recentVideos.forEach(video => console.log(`${video.title}`))
     }
 }
+
+// youtubeUser.showVideoTitle()
 
 /*
   03
   - Exiba o valor do PI no console.
 */
 
-
+//console.log(Math.PI)
 
 /*
   04
@@ -116,6 +127,7 @@ const youtubeUser = {
 */
 
 const firstNumber = 8.3
+// console.log(Math.ceil(firstNumber))
 
 /*
   05
@@ -124,6 +136,7 @@ const firstNumber = 8.3
 */
 
 const secondNumber = 3.5
+// console.log(Math.round(secondNumber))
 
 /*
   06
@@ -132,6 +145,7 @@ const secondNumber = 3.5
 */
 
 const thirdNumber = 8.9
+// console.log(Math.floor(thirdNumber))
 
 /*
   07
@@ -139,9 +153,12 @@ const thirdNumber = 8.9
 */
 
 const fourthNumber = 5.5
+// console.log(Math.trunc(fourthNumber))
 
 /*
   08
   - A cada vez que o index.html for carregado, exiba no console um número  
     aleatório de 0 à 10, incluindo 0 e 10.
 */
+
+console.log(Math.round(Math.random() * 10))

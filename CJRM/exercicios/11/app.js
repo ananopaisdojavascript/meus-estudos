@@ -4,6 +4,8 @@
   - Ela deve ter um escopo global.
 */
 
+let name = "Ana"
+
 /*
   02
   - Funções também são blocos de código;
@@ -16,6 +18,17 @@
     defined" será exibido no console;
   - Você sabe por que isso aconteceu?
 */
+
+const myAge = () => {
+  let someAge = 44
+  // console.log(`Dentro do escopo: ${someAge}`)
+}
+
+myAge()
+// console.log(`Fora do escopo: ${someAge}`)
+// returns ReferenceError: someAge is not defined
+// Por que apareceu essa mensagem de erro?
+// É porque a variável 'someAge' funciona apenas dentro da função 'myAge'
 
 /*
   03
@@ -34,20 +47,44 @@
       "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
 */
 
+let car = {
+  name: "Corolla",
+  brand: "Toyota",
+  colors: ["preto", "branco", "prata"],
+  isRunning: false,
+  run() {
+    if(!this.isRunning === true) console.log(`O ${this.name} está em movimento`)
+  },
+  stop() {
+    if(this.isRunning === false) console.log(`O ${this.name} está parado`)
+  },
+  getColorsMessage() {
+    console.log(`O ${this.name} está disponível nas cores ${this.colors[0]}, ${this.colors[1]} e ${this.colors[2]}`)
+  }
+}
+
+console.log(car)
+
 /*
   04
   - Faça o carro andar e exiba no console se ele realmente está em movimento.
 */
+
+car.run()
 
 /*
   05
   - Faça o carro parar e exiba no console se ele realmente está parado.
 */
 
+car.stop()
+
 /*
   06
   - Exiba, no console, a mensagem com as cores do carro.
 */
+
+car.getColorsMessage()
 
 /*
   07
@@ -55,3 +92,5 @@
  
  - Utilize a notação de colchetes para acessar as propriedades do carro.
 */
+
+console.log(`O carro é um ${car['brand']} ${car['name']}`)
