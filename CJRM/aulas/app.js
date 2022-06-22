@@ -347,14 +347,29 @@ parâmetro (number) que será aplicada a todos os valores do vetor 'numbers'
 
 // Uso de callbacks
 
-const ul = document.querySelector('[data-js="ul"]')
+// const ul = document.querySelector('[data-js="ul"]')
 
-const socialNetworks = ['YouTube', 'Instagram', 'Twitter']
+// const socialNetworks = ['YouTube', 'Instagram', 'Twitter']
 
-let template = ''
+// let template = ''
 
-socialNetworks.forEach(element => {
-    template += `<li>${element}</li>`
+// socialNetworks.forEach(element => {
+//     template += `<li>${element}</li>`
+// })
+
+// ul.innerHTML = template
+
+const paragraphs = document.querySelectorAll('p')
+
+const content = document.querySelector('.content')
+
+const people = ['Ana', 'Jennie', 'Irene', 'Tiffany']
+
+people.forEach(person => {
+    content.innerHTML += `
+        <li>${person}</li>
+    `
 })
 
-ul.innerHTML = template
+const link = document.querySelector('a')
+console.log(link.getAttribute('href'))
