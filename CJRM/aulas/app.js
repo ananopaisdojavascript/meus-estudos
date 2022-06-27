@@ -359,17 +359,29 @@ parâmetro (number) que será aplicada a todos os valores do vetor 'numbers'
 
 // ul.innerHTML = template
 
-const paragraphs = document.querySelectorAll('p')
+// const paragraphs = document.querySelectorAll('p')
 
-const content = document.querySelector('.content')
+// const content = document.querySelector('.content')
 
-const people = ['Ana', 'Jennie', 'Irene', 'Tiffany']
+// const people = ['Ana', 'Jennie', 'Irene', 'Tiffany']
 
-people.forEach(person => {
-    content.innerHTML += `
-        <li>${person}</li>
-    `
-})
+// people.forEach(person => {
+//     content.innerHTML += `
+//         <li>${person}</li>
+//     `
+// })
 
 const link = document.querySelector('a')
-console.log(link.getAttribute('href'))
+// console.log(link.getAttribute('href'))
+
+const article = document.querySelector('article')
+
+const children = Array.from(article.children)
+
+children.forEach(child => {
+    child.classList.add("pomegranate")
+})
+
+const h2 = document.querySelector('h2')
+
+console.log(h2.parentElement)
