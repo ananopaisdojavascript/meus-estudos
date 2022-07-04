@@ -1,0 +1,19 @@
+<h1>{{ title }}</h1>
+
+<div>
+  <button>Incluir tarefa</button>
+</div>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Tarefa</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let task of taskArr">
+    <td>{{task.id}}</td>
+    <td>{{task.task}}</td>
+    <td><button>Editar</button></td>
+    <td><button (click)="delete(task)">Excluir</button></td>
+  </tr>
+</table>

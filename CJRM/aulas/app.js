@@ -384,4 +384,4 @@ children.forEach(child => {
 
 const h2 = document.querySelector('h2')
 
-console.log(h2.parentElement)
+console.log(h2.previousElementSibling)

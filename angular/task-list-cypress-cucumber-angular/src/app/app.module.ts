@@ -4,23 +4,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TaskCreateComponent } from './task-create/task-create.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { TaskEditComponent } from './task-edit/task-edit.component';
-
+import { TasksModule } from './modules/tasks/tasks.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TaskCreateComponent,
-    TaskListComponent,
-    TaskEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TasksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

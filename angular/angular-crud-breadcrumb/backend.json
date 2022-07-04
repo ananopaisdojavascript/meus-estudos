@@ -1,0 +1,44 @@
+{
+  "girls": [
+    {
+      "id": 1,
+      "name": "Jisoo",
+      "group": "BlackPink"
+    },
+    {
+      "id": 2,
+      "name": "YuJin",
+      "group": "Kepler"
+    },
+    {
+      "id": 3,
+      "name": "Irene",
+      "group": "Red Velvet"
+    },
+    {
+      "name": "Wendy",
+      "group": "Red Velvet",
+      "id": 4
+    },
+    {
+      "name": "Karina",
+      "group": "aespa",
+      "id": 5
+    },
+    {
+      "name": "Sana",
+      "group": "Twice",
+      "id": 6
+    },
+    {
+      "name": "Momo",
+      "group": "Twice",
+      "id": 7
+    },
+    {
+      "name": "YoonA",
+      "group": "SNSD",
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<h1 *ngIf="editName">Include Name</h1>
+
+<h1 *ngIf="!editName">Edit Name</h1>
+
+<form [formGroup]="girlForm" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="Digite um nome" formControlName="name">
+  <input type="text" placeholder="Digite um grupo" formControlName="group">
+  <button type="submit">Submit</button>
+  <button routerLink="/girls">Voltar</button>
+</form>

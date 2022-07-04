@@ -2,18 +2,27 @@
   "tasks": [
     {
       "id": 1,
-      "task": "Estudar Angular",
-      "isTheTaskDone": true
+      "task": "Estudar Angular"
     },
     {
       "id": 2,
-      "task": "Ir ao supermercado",
-      "isTheTaskDone": false
+      "task": "Ir ao supermercado"
     },
     {
       "id": 3,
-      "task": "",
-      "isTheTaskDone": false
+      "task": "Limpar a casa"
+    },
+    {
+      "id": 4,
+      "task": "Pagar contas"
+    },
+    {
+      "task": "Lavar a louça",
+      "id": 5
+    },
+    {
+      "task": "Estudar React",
+      "id": 6
     }
   ]
 }

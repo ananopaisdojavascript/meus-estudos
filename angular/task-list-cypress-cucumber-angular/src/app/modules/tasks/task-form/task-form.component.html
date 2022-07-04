@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="taskForm">
+  <input type="text" placeholder="Digite uma tarefa" formControlName="task">
+  <div>
+    <input type="submit" value={{buttonName}}>
+    <button>Voltar</button>
+  </div>
+</form>

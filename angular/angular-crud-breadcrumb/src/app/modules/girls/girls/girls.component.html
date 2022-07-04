@@ -1,0 +1,26 @@
+<h1>{{ title }}</h1>
+
+<form [formGroup]="searchGirl">
+  <input type="text" placeholder="Digite um nome" formControlName="name" data-cy="search">
+</form>
+
+<button data-cy="include" routerLink="/form">Incluir</button>
+
+<table>
+  <tr>
+    <th>Identificação</th>
+    <th>Nome</th>
+    <th>Grupo</th>
+  </tr>
+  <tr *ngFor="let girl of girlArray">
+    <td data-cy="id">{{girl.id}}</td>
+    <td data-cy="name">{{girl.name}}</td>
+    <td data-cy="group">{{girl.group}}</td>
+    <td>
+      <button data-cy="edit" [routerLink]="['/form', girl.id]">Editar</button>
+    </td>
+    <td>
+      <button data-cy="delete" (click)="delete(girl)">Excluir</button>
+    </td>
+  </tr>
+</table>
