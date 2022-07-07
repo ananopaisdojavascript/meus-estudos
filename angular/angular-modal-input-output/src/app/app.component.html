@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+<app-modal
+  [modal]="modal"
+  [title]="'Modal deselegante'"
+  [text]="'O criador do modal foi o programador Ethan Zuckerman.'"
+  (openModal)="openModal()"
+  (closeModal)="closeModal()"
+></app-modal>

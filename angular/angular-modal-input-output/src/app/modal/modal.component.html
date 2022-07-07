@@ -1,0 +1,9 @@
+<button (click)="open()">Clique Aqui</button>
+
+<div class="modal" *ngIf="modal">
+  <div class="modal__content">
+    <div class="modal__close" (click)="close()">X</div>
+    <h2>{{ title }}</h2>
+    <p>{{ text }}</p>
+  </div>
+</div>
