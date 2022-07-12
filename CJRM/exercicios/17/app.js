@@ -2,21 +2,27 @@
   01
   - No envio do form, faça com que a página não seja recarregada.
 */
-const form = document.querySelector('form');
+const form = document.querySelector("form");
+const input = document.querySelector("#input");
+const regular = /[a-zA-Z0-9]{7,11}/;
+const isThisStringValid = regular.test(input);
+const clearInput = () => {
+  input.value = "";
+  input.focus();
+};
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    const value = event.target.input.value;
-    const formReg = /[a-zA-Z0-9]{7,11}/
-    const verifyPattern = formReg.test(value);
-    console.log(value);
-    if(verifyPattern) {
-        console.log("O valor inserido no input é válido =)")
-    } else {
-        console.log("Valor inválido =(")
-    }
-})
-
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log(input.value);
+  if (isThisStringValid) {
+    console.log("O valor inserido no input é válido =)");
+    clearInput();
+    return;
+  }
+  console.log("Valor inválido =(");
+  clearInput();
+};
+form.addEventListener("submit", handleSubmit);
 
 /*
   02
@@ -31,7 +37,7 @@ form.addEventListener('submit', event => {
   - Exiba no console o boolean no qual este teste resulta.
 */
 
-const paragraph = document.querySelector('p');
+const paragraph = document.querySelector("p");
 const docRegEx = /documentation/;
 const result = docRegEx.test(paragraph.textContent);
 console.log(result);
@@ -43,7 +49,8 @@ console.log(result);
   - Teste se o match aconteceu e exiba o resultado no console.
 */
 
-const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta'
+const B99message =
+  "E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta";
 const reg = /[A-Z0-9]{3}/;
 const anotherResult = reg.test(B99message);
 console.log(anotherResult);
@@ -54,11 +61,11 @@ console.log(anotherResult);
     resultado do teste entre a regex e a string exibido no console seja true.
 */
 
-const word = 'NASA'
-const NASARegex = /^[A-Z]{4}$/
-const NASAResult = NASARegex.test(word)
+const word = "NASA";
+const NASARegex = /^[A-Z]{4}$/;
+const NASAResult = NASARegex.test(word);
 
-console.log(NASAResult)
+console.log(NASAResult);
 
 /*
   06
