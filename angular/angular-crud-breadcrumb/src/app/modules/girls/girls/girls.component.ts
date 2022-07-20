@@ -20,6 +20,8 @@ export class GirlsComponent implements OnInit {
     name: new FormControl('', Validators.required),
   });
 
+  search = '';
+
   title = 'Kpop Girls';
 
   girlArray: Girls[];

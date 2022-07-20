@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "name": "YuJin",
+      "name": "Choi YuJin",
       "group": "Kepler"
     },
     {
@@ -39,6 +39,11 @@
       "name": "YoonA",
       "group": "SNSD",
       "id": 8
+    },
+    {
+      "name": "Sakura",
+      "group": "Le Sserafim",
+      "id": 9
     }
   ]
 }

@@ -1,7 +1,7 @@
 <h1>{{ title }}</h1>
 
 <form [formGroup]="searchGirl">
-  <input type="text" placeholder="Digite um nome" formControlName="name" data-cy="search">
+  <input type="text" placeholder="Digite um nome" formControlName="name" data-cy="search" [(ngModel)]="search">
 </form>
 
 <button data-cy="include" routerLink="/form">Incluir</button>
@@ -12,7 +12,7 @@
     <th>Nome</th>
     <th>Grupo</th>
   </tr>
-  <tr *ngFor="let girl of girlArray">
+  <tr *ngFor="let girl of girlArray | searchFilter: search">
     <td data-cy="id">{{girl.id}}</td>
     <td data-cy="name">{{girl.name}}</td>
     <td data-cy="group">{{girl.group}}</td>

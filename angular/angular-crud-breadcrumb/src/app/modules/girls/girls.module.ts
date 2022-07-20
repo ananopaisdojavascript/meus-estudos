@@ -6,9 +6,10 @@ import { GirlsComponent } from './girls/girls.component';
 import { GirlFormComponent } from './girl-form/girl-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SearchFilterPipe } from 'src/app/services/search-filter.pipe';
 
 @NgModule({
-  declarations: [GirlsComponent, GirlFormComponent],
+  declarations: [GirlsComponent, GirlFormComponent, SearchFilterPipe],
   imports: [
     CommonModule,
     SharedModule,
