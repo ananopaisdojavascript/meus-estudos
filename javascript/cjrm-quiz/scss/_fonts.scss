@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Fira+Sans:wght@100;200;300;400&family=Great+Vibes&family=Lato:wght@100;400&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@100;200;300;400&family=Nanum+Gothic&family=Noto+Sans+JP:wght@100;300;400&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;600&family=Orelega+One&family=PT+Sans&family=Pacifico&family=Petit+Formal+Script&family=Playfair+Display:wght@400;500&family=Poppins:wght@100;200;300;400;500&family=Quicksand:wght@300;400&family=Raleway:wght@100;200;300;400&family=Roboto+Slab:wght@100;200;300;400&family=Roboto:wght@100;400&family=Rochester&family=Sacramento&family=Source+Sans+Pro:wght@200;300;400&family=Work+Sans:wght@100;200;300;400&display=swap");
+
+$fonts: (
+    allura 'Allura', cursive,
+    courgette 'Courgette', cursive,
+    fira 'Fira Sans', sans-serif,
+    great-vibes 'Great Vibes', cursive,
+    lato 'Lato', sans-serif,
+    lora 'Lora', serif,
+    montserrat 'Montserrat', sans-serif,
+    nanum 'Nanum Gothic', sans-serif,
+    noto-sans 'Noto Sans JP', sans-serif,
+    nunito 'Nunito', sans-serif,
+    open-sans 'Open Sans', sans-serif,
+    orlega-one 'Orelega One', cursive,
+    pacifico 'Pacifico', cursive,
+    petit-formal 'Petit Formal Script', cursive,
+    playfair-display 'Playfair Display', serif,
+    poppins 'Poppins', sans-serif,
+    pt-sans 'PT Sans', sans-serif,
+    quicksand 'Quicksand', sans-serif,
+    raleway 'Raleway', sans-serif,
+    roboto 'Roboto', sans-serif,
+    roboto-slab 'Roboto Slab', serif
+    rochester 'Rochester', cursive,
+    sacramento 'Sacramento', cursive,
+    source-sans 'Source Sans Pro', sans-serif,
+    work-sans 'Work Sans', sans-serif,
+);
+
+@each $name, $font in $fonts {
+    .rose__font--#{$name} {font-family: $font;}
+}

@@ -1,0 +1,58 @@
+$colors: (
+ "yankees-blue": #112A46,
+ "bright-grey": #ECF0F1,
+ "faded-poster": #81ecec,
+ "white": #ffffff
+);
+
+@each $color, $i in $colors {
+  .rose__color--#{$color} {
+    color: $i;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__color--#{$color}-hover:hover {
+    color: $i;
+    cursor: pointer;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__background-color--#{$color} {
+    background: $i;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__background-color--#{$color}-hover:hover {
+    background-color: $i;
+    cursor: pointer;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__border--#{$color} {
+    border: 1.5px solid $i;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__border--#{$color}-hover:hover {
+    border: 1.5px solid $i;
+    cursor: pointer;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__border-bottom--#{$color} {
+    border-top: 1.5px solid $i;
+  }
+}
+
+@each $color, $i in $colors {
+  .rose__border-bottom--#{$color}-hover:hover {
+    border-top: 1.5px solid $i;
+    cursor: pointer;
+  }
+}

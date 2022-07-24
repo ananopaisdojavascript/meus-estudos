@@ -1,0 +1,44 @@
+@for $i from 1 through 6 {
+  .rose__text-size--#{$i} {
+    font-size: 1rem * $i;
+  }
+}
+
+@mixin width-box {
+  width: 31.25em;
+}
+
+$border-radius-sizes: (
+  size1: 0.3125rem,
+  size2: 0.625rem,
+  size3: 1rem,
+  size4: 1.25rem,
+);
+
+@each $size, $i in $border-radius-sizes {
+  .rose__border-radius--#{$size} {
+    border-radius: $i;
+  }
+}
+
+@for $i from 1 through 6 {
+  .rose__font-size--#{$i} {
+    font-size: 1rem * $i;
+  }
+}
+
+@for $i from 1 through 6 {
+  .rose__margin-size--#{$i} {
+    margin: 1rem * $i;
+  }
+}
+
+@for $i from 1 through 6 {
+  .rose__padding-size--#{$i} {
+    padding: 1rem * $i;
+  }
+}
+
+.rose__box {
+  @include width-box;
+}

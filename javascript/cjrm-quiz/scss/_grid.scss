@@ -1,0 +1,52 @@
+$width: 48em;
+
+@mixin flexy-row {
+  @if $width {
+    @media (min-width: $width) {
+      display: flex;
+      flex-direction: row;
+    }
+  } @else {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.rose__row {
+  @include flexy-row;
+}
+
+@mixin marginAndPaddingColumn {
+  margin: 0.6rem;
+  padding: 0.6rem;
+}
+
+.rose__col {
+  @include marginAndPaddingColumn;
+  flex: 1;
+}
+
+.rose__col--2 {
+  @include marginAndPaddingColumn;
+  flex: 2;
+}
+
+.rose__col--10 {
+  @include marginAndPaddingColumn;
+  flex: 10;
+}
+
+.rose__col--3 {
+  @include marginAndPaddingColumn;
+  flex: 10;
+}
+
+.rose__col--4 {
+  flex: 4;
+  @include marginAndPaddingColumn;
+}
+
+.rose__col--8 {
+  flex: 8;
+  @include marginAndPaddingColumn;
+}

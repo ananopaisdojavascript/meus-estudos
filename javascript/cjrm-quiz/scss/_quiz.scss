@@ -1,0 +1,93 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+@use "./sizes" as *;
+
+@mixin container {
+  width: 70%;
+  background-color: map-get($colors, "white");
+  margin: 2rem auto;
+}
+
+@mixin quiz-question-container {
+  display: block;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+}
+
+body {
+  background-color: map-get($colors, "bright-grey");
+}
+
+.title {
+  text-align: center;
+}
+
+.result {
+  @include container;
+
+  p {
+    text-align: center;
+  }
+}
+
+.quiz {
+  &__question {
+    @include container;
+
+    &-container {
+      @include quiz-question-container;
+      cursor: pointer;
+      user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+    &--checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1.5625rem;
+      width: 1.5625rem;
+      background-color: map-get($colors, "bright-grey");
+      border-radius: 50%;
+    }
+
+    input:checked ~ &--checkmark {
+      background-color: map-get($colors, "yankees-blue");
+    }
+
+    &--checkmark::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 0.5625rem;
+      left: 0.5625rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: map-get($colors, "white");
+    }
+
+    input:checked ~ &--checkmark::after {
+      display: block;
+    }
+  }
+
+  &__button {
+    text-align: center;
+
+    button {
+      border: none;
+      width: 10rem;
+    }
+  }
+}
+
+// .displayNone {
+//     display: none;
+// }

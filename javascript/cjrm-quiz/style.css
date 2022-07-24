@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Fira+Sans:wght@100;200;300;400&family=Great+Vibes&family=Lato:wght@100;400&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@100;200;300;400&family=Nanum+Gothic&family=Noto+Sans+JP:wght@100;300;400&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;600&family=Orelega+One&family=PT+Sans&family=Pacifico&family=Petit+Formal+Script&family=Playfair+Display:wght@400;500&family=Poppins:wght@100;200;300;400;500&family=Quicksand:wght@300;400&family=Raleway:wght@100;200;300;400&family=Roboto+Slab:wght@100;200;300;400&family=Roboto:wght@100;400&family=Rochester&family=Sacramento&family=Source+Sans+Pro:wght@200;300;400&family=Work+Sans:wght@100;200;300;400&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.rose__color--yankees-blue {
+  color: #112A46;
+}
+
+.rose__color--bright-grey {
+  color: #ECF0F1;
+}
+
+.rose__color--faded-poster {
+  color: #81ecec;
+}
+
+.rose__color--white {
+  color: #ffffff;
+}
+
+.rose__color--yankees-blue-hover:hover {
+  color: #112A46;
+  cursor: pointer;
+}
+
+.rose__color--bright-grey-hover:hover {
+  color: #ECF0F1;
+  cursor: pointer;
+}
+
+.rose__color--faded-poster-hover:hover {
+  color: #81ecec;
+  cursor: pointer;
+}
+
+.rose__color--white-hover:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.rose__background-color--yankees-blue {
+  background: #112A46;
+}
+
+.rose__background-color--bright-grey {
+  background: #ECF0F1;
+}
+
+.rose__background-color--faded-poster {
+  background: #81ecec;
+}
+
+.rose__background-color--white {
+  background: #ffffff;
+}
+
+.rose__background-color--yankees-blue-hover:hover {
+  background-color: #112A46;
+  cursor: pointer;
+}
+
+.rose__background-color--bright-grey-hover:hover {
+  background-color: #ECF0F1;
+  cursor: pointer;
+}
+
+.rose__background-color--faded-poster-hover:hover {
+  background-color: #81ecec;
+  cursor: pointer;
+}
+
+.rose__background-color--white-hover:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.rose__border--yankees-blue {
+  border: 1.5px solid #112A46;
+}
+
+.rose__border--bright-grey {
+  border: 1.5px solid #ECF0F1;
+}
+
+.rose__border--faded-poster {
+  border: 1.5px solid #81ecec;
+}
+
+.rose__border--white {
+  border: 1.5px solid #ffffff;
+}
+
+.rose__border--yankees-blue-hover:hover {
+  border: 1.5px solid #112A46;
+  cursor: pointer;
+}
+
+.rose__border--bright-grey-hover:hover {
+  border: 1.5px solid #ECF0F1;
+  cursor: pointer;
+}
+
+.rose__border--faded-poster-hover:hover {
+  border: 1.5px solid #81ecec;
+  cursor: pointer;
+}
+
+.rose__border--white-hover:hover {
+  border: 1.5px solid #ffffff;
+  cursor: pointer;
+}
+
+.rose__border-bottom--yankees-blue {
+  border-top: 1.5px solid #112A46;
+}
+
+.rose__border-bottom--bright-grey {
+  border-top: 1.5px solid #ECF0F1;
+}
+
+.rose__border-bottom--faded-poster {
+  border-top: 1.5px solid #81ecec;
+}
+
+.rose__border-bottom--white {
+  border-top: 1.5px solid #ffffff;
+}
+
+.rose__border-bottom--yankees-blue-hover:hover {
+  border-top: 1.5px solid #112A46;
+  cursor: pointer;
+}
+
+.rose__border-bottom--bright-grey-hover:hover {
+  border-top: 1.5px solid #ECF0F1;
+  cursor: pointer;
+}
+
+.rose__border-bottom--faded-poster-hover:hover {
+  border-top: 1.5px solid #81ecec;
+  cursor: pointer;
+}
+
+.rose__border-bottom--white-hover:hover {
+  border-top: 1.5px solid #ffffff;
+  cursor: pointer;
+}
+
+.rose__font--allura {
+  font-family: "Allura";
+}
+
+.rose__font--courgette {
+  font-family: "Courgette";
+}
+
+.rose__font--fira {
+  font-family: "Fira Sans";
+}
+
+.rose__font--great-vibes {
+  font-family: "Great Vibes";
+}
+
+.rose__font--lato {
+  font-family: "Lato";
+}
+
+.rose__font--lora {
+  font-family: "Lora";
+}
+
+.rose__font--montserrat {
+  font-family: "Montserrat";
+}
+
+.rose__font--nanum {
+  font-family: "Nanum Gothic";
+}
+
+.rose__font--noto-sans {
+  font-family: "Noto Sans JP";
+}
+
+.rose__font--nunito {
+  font-family: "Nunito";
+}
+
+.rose__font--open-sans {
+  font-family: "Open Sans";
+}
+
+.rose__font--orlega-one {
+  font-family: "Orelega One";
+}
+
+.rose__font--pacifico {
+  font-family: "Pacifico";
+}
+
+.rose__font--petit-formal {
+  font-family: "Petit Formal Script";
+}
+
+.rose__font--playfair-display {
+  font-family: "Playfair Display";
+}
+
+.rose__font--poppins {
+  font-family: "Poppins";
+}
+
+.rose__font--pt-sans {
+  font-family: "PT Sans";
+}
+
+.rose__font--quicksand {
+  font-family: "Quicksand";
+}
+
+.rose__font--raleway {
+  font-family: "Raleway";
+}
+
+.rose__font--roboto {
+  font-family: "Roboto";
+}
+
+.rose__font--roboto-slab {
+  font-family: "Roboto Slab";
+}
+
+.rose__font--serif {
+  font-family: rochester;
+}
+
+.rose__font--sacramento {
+  font-family: "Sacramento";
+}
+
+.rose__font--source-sans {
+  font-family: "Source Sans Pro";
+}
+
+.rose__font--work-sans {
+  font-family: "Work Sans";
+}
+
+.rose__text-size--1 {
+  font-size: 1rem;
+}
+
+.rose__text-size--2 {
+  font-size: 2rem;
+}
+
+.rose__text-size--3 {
+  font-size: 3rem;
+}
+
+.rose__text-size--4 {
+  font-size: 4rem;
+}
+
+.rose__text-size--5 {
+  font-size: 5rem;
+}
+
+.rose__text-size--6 {
+  font-size: 6rem;
+}
+
+.rose__border-radius--size1 {
+  border-radius: 0.3125rem;
+}
+
+.rose__border-radius--size2 {
+  border-radius: 0.625rem;
+}
+
+.rose__border-radius--size3 {
+  border-radius: 1rem;
+}
+
+.rose__border-radius--size4 {
+  border-radius: 1.25rem;
+}
+
+.rose__font-size--1 {
+  font-size: 1rem;
+}
+
+.rose__font-size--2 {
+  font-size: 2rem;
+}
+
+.rose__font-size--3 {
+  font-size: 3rem;
+}
+
+.rose__font-size--4 {
+  font-size: 4rem;
+}
+
+.rose__font-size--5 {
+  font-size: 5rem;
+}
+
+.rose__font-size--6 {
+  font-size: 6rem;
+}
+
+.rose__margin-size--1 {
+  margin: 1rem;
+}
+
+.rose__margin-size--2 {
+  margin: 2rem;
+}
+
+.rose__margin-size--3 {
+  margin: 3rem;
+}
+
+.rose__margin-size--4 {
+  margin: 4rem;
+}
+
+.rose__margin-size--5 {
+  margin: 5rem;
+}
+
+.rose__margin-size--6 {
+  margin: 6rem;
+}
+
+.rose__padding-size--1 {
+  padding: 1rem;
+}
+
+.rose__padding-size--2 {
+  padding: 2rem;
+}
+
+.rose__padding-size--3 {
+  padding: 3rem;
+}
+
+.rose__padding-size--4 {
+  padding: 4rem;
+}
+
+.rose__padding-size--5 {
+  padding: 5rem;
+}
+
+.rose__padding-size--6 {
+  padding: 6rem;
+}
+
+.rose__box {
+  width: 31.25em;
+}
+
+body {
+  background-color: #ECF0F1;
+}
+
+.title {
+  text-align: center;
+}
+
+.result {
+  width: 70%;
+  background-color: #ffffff;
+  margin: 2rem auto;
+}
+.result p {
+  text-align: center;
+}
+
+.quiz__question {
+  width: 70%;
+  background-color: #ffffff;
+  margin: 2rem auto;
+}
+.quiz__question-container {
+  display: block;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  cursor: pointer;
+  user-select: none;
+}
+.quiz__question-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.quiz__question--checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  background-color: #ECF0F1;
+  border-radius: 50%;
+}
+input:checked ~ .quiz__question--checkmark {
+  background-color: #112A46;
+}
+.quiz__question--checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 0.5625rem;
+  left: 0.5625rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+input:checked ~ .quiz__question--checkmark::after {
+  display: block;
+}
+.quiz__button {
+  text-align: center;
+}
+.quiz__button button {
+  border: none;
+  width: 10rem;
+}
+
+/*# sourceMappingURL=style.css.map */
