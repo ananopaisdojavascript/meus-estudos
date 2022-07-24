@@ -22,24 +22,21 @@ setTimeout(() => {
 
 const buttonInitCounter = document.querySelector(".button-init-counter");
 const buttonStopCounter = document.querySelector(".button-stop-counter");
-const h1 = document.querySelector("h1");
-let count = 0;
+const counterContainer = document.querySelector(".counter-container");
+let timer = null;
 
 const startCounter = () => {
-  h1.textContent = `${count}`;
-  count++;
+  const increment = Number(counterContainer.textContent) + 1;
+  counterContainer.textContent = increment;
 };
 
 
 const stopCounter = () => {
-  h1.textContent = `${count}`;
-  count--;
-  if(count === 0) {
-    buttonStopCounter.setAttribute("disabled", "");
-  } else {
-    buttonStopCounter.removeAttribute("disabled");
-  }
+  clearInterval(timer);
+  counterContainer.textContent = 0;
 };
 
-buttonInitCounter.addEventListener("click", startCounter)
-buttonStopCounter.addEventListener("click", stopCounter)
+buttonInitCounter.addEventListener("click", () => setInterval(startCounter, 1000))
+buttonStopCounter.addEventListener("click", () => {
+  stopCounter()
+})
