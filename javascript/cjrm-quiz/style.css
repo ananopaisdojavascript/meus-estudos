@@ -420,12 +420,12 @@ body {
   text-align: center;
 }
 
-.result {
+.final-score-container {
   width: 70%;
   background-color: #ffffff;
   margin: 2rem auto;
 }
-.result p {
+.final-score-container p {
   text-align: center;
 }
 

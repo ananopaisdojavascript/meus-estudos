@@ -1,35 +1,52 @@
 const quiz = document.querySelector(".quiz");
-const result = document.querySelector(".result");
+const finalScoreContainer = document.querySelector(".final-score-container");
 const correctAnswers = ["C", "C", "D", "C", "B", "B", "B", "B", "D", "D"];
 
-quiz.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let score = 0;
-  const userAnswers = [
-    quiz.inputQuestion1.value,
-    quiz.inputQuestion2.value,
-    quiz.inputQuestion3.value,
-    quiz.inputQuestion4.value,
-    quiz.inputQuestion5.value,
-    quiz.inputQuestion6.value,
-    quiz.inputQuestion7.value,
-    quiz.inputQuestion8.value,
-    quiz.inputQuestion9.value,
-    quiz.inputQuestion10.value,
-  ];
+let score = 0;
+
+const getUserAnswers = () => {
+  let userAnswers = [];
+
+  correctAnswers.forEach((_, index) => {
+    const userAnswer = quiz[`inputQuestion${index + 1}`].value;
+    userAnswers.push(userAnswer);
+  });
+  return userAnswers;
+};
+
+const calculateUserScore = (userAnswers) => {
   userAnswers.forEach((answer, index) => {
-    if (answer === correctAnswers[index]) {
+    const isUserAnswerCorrect = answer === correctAnswers[index];
+    if (isUserAnswerCorrect) {
       score += 10;
     }
   });
-  scrollTo(0, 0);
-  result.classList.remove("displayNone");
+};
+
+const showFinalScore = () => {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+  finalScoreContainer.classList.remove("displayNone");
+};
+
+const animateFinalScore = () => {
   let counter = 0;
+
   const timer = setInterval(() => {
-    if(counter === score) {
-        clearInterval(timer);
+    if (counter === score) {
+      clearInterval(timer);
     }
-    result.querySelector("span").textContent = `${counter}%`;
-    counter++;
+    finalScoreContainer.querySelector("span").textContent = `${counter++}%`;
   }, 10);
+};
+
+quiz.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const userAnswers = getUserAnswers();
+  calculateUserScore(userAnswers);
+  showFinalScore();
+  animateFinalScore();
 });
