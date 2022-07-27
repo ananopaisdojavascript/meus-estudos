@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<form [formGroup]="productForm" (ngSubmit)="update()">
+  <input type="text" placeholder="Digite um produto" formControlName="product">
+  <button type="submit">{{ buttonName }}</button>
+  <button routerLink="/produtos">Voltar</button>
+</form>

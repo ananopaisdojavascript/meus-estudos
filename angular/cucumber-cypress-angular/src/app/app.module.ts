@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GirlsComponent } from './girls/girls.component';
-import { GirlSearchPipe } from './girls/girl-search.pipe';
-import { GirlSelectPipe } from './girls/girl-select.pipe';
+import { ProductsComponent } from './products/products.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GirlsComponent,
-    GirlSearchPipe,
-    GirlSelectPipe
+    ProductsComponent,
+    ProductFormComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule, FormsModule
