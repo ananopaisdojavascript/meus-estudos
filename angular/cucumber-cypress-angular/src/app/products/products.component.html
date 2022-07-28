@@ -10,9 +10,9 @@
   <tr>
     <th>Produto</th>
   </tr>
-  <tr *ngFor="let product of productArray">
-    <td>{{ product.product }}</td>
-    <td><button [routerLink]="['/form', product.id]">Atualizar Produto</button></td>
-    <td><button (click)="delete(product)">Excluir Produto</button></td>
+  <tr *ngFor="let item of productArray">
+    <td>{{ item.product }}</td>
+    <td><button [routerLink]="['/form', item.id]">Atualizar Produto</button></td>
+    <td><button (click)="delete(item.id)">Excluir Produto</button></td>
   </tr>
 </table>

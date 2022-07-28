@@ -16,15 +16,15 @@ export class ProductsComponent implements OnInit {
   title = 'Nossa Lista de Compras'
 
   get() {
-    this.productService.get().subscribe(data => {
+    this.productService.get().subscribe((data: Product[]) => {
       this.productArray = data;
     })
   }
 
-  delete(product: Product) {
-    this.productService.delete(product.id).subscribe(data => {
-      const index = this.productArray.indexOf(product)
-      this.productArray.splice(index, 1)
+  delete(id: string) {
+    this.productService.delete(id).subscribe(response => {
+      this.productArray = this.productArray.filter(product => product.id !== id);
+      console.log("Produto eliminado com sucesso!!!!")
     })
   }
 

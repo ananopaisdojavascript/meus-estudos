@@ -13,51 +13,51 @@ export class ProductFormComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router, private route: ActivatedRoute) { }
 
-  title = 'Título'
+  title = ''
 
-  buttonName = 'produto'
+  buttonName = ''
 
   updateProduct = false;
 
   id: string;
 
-  product = '';
 
   productForm = new FormGroup({
     product: new FormControl('', Validators.required)
   })
 
   create() {
-    this.productService.create(this.productForm.value).subscribe(data => {
+    this.productService.create(this.productForm.value).subscribe(response => {
       this.router.navigate(['/produtos'])
+      console.log("Produto cadastrado com sucesso!!!")
     })
-    this.productForm.reset()
   }
 
-  ngOnInit(): void {
+
+  ngOnInit() {
     this.route.paramMap.subscribe(param => {
-      this.id = param.get("id")
-      this.productService.getById(this.id).subscribe(product => {
-        this.productForm.reset(product)
+      this.id = param.get("id");
+      this.productService.find(this.id).subscribe(product => {
+        this.productForm.reset(product);
       })
     })
 
     this.updateProduct = !this.id;
 
     if(this.id) {
-      this.title = 'Atualizar Produto'
+      this.title = 'Atualização de Produto'
       this.buttonName = 'Atualizar Produto'
     } else {
-      this.title = 'Incluir Produto'
-      this.buttonName = 'Incluir Produto'
+      this.title = 'Cadastro de Produto'
+      this.buttonName = 'Cadastrar Produto'
     }
   }
 
   update() {
     this.productService.update({ id: this.id, ...this.productForm.value }).subscribe(data => {
       this.router.navigate(['/produtos'])
+      console.log("Produto atualizado com sucesso!!!!")
     })
-    this.productForm.reset();
   }
 
   onSubmit() {
