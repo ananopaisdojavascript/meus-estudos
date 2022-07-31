@@ -4,15 +4,9 @@ const correctAnswers = ["C", "C", "D", "C", "B", "B", "B", "B", "D", "D"];
 
 let score = 0;
 
-const getUserAnswers = () => {
-  let userAnswers = [];
-
-  correctAnswers.forEach((_, index) => {
-    const userAnswer = quiz[`inputQuestion${index + 1}`].value;
-    userAnswers.push(userAnswer);
-  });
-  return userAnswers;
-};
+const getUserAnswers = () => correctAnswers.map((_, index) => {
+  return quiz[`inputQuestion${index + 1}`].value;
+});
 
 const calculateUserScore = (userAnswers) => {
   userAnswers.forEach((answer, index) => {
@@ -27,7 +21,7 @@ const showFinalScore = () => {
   scrollTo({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
   finalScoreContainer.classList.remove("displayNone");
 };
