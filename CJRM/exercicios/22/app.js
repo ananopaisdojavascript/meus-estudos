@@ -28,7 +28,7 @@ const characters = [
 
 // Para não modificar o vetor original, criar uma cópia com o map()
 const orderedCharacters = characters
-  .map(item => ({ id: item.id, name: item.name }))
+  .map(({ id, name }) => ({ id, name }))
   .sort((a, b) => a.id - b.id);
 
 console.log(orderedCharacters);
@@ -158,12 +158,12 @@ const pets = [
 
 const dogs = pets
   .filter(({type}) => type === "Dog")
-  .map((dog) => {
+  .map(({ name, age, gender, type }) => {
     return {
-      name: dog.name,
-      age: dog.age * 7,
-      gender: dog.gender,
-      type: dog.type,
+      name,
+      age: age * 7,
+      gender,
+      type,
     };
   });
 
@@ -179,9 +179,9 @@ console.log(dogs);
 const ul = document.querySelector("ul");
 
 const disneyMovieNames = topBrazilmovies
-  .map((movie) => {
+  .map(({ title }) => {
     const li = document.createElement("li");
-    li.textContent = movie.title;
+    li.textContent = title;
     return ul.append(li);
   });
 
