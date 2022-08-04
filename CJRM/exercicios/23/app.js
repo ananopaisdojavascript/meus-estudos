@@ -65,7 +65,6 @@ const friends = [
 ]
 
 const friendsNearMe = friends.filter(({nearMe}) => nearMe === true).map(friend => friend.name)
-debugger
 
 
 /*
@@ -101,6 +100,7 @@ const data = [{
   population: 263991379
 }]
 
-const removeChina = data.findIndex(item => item.country === 'China')
-const sumOfPopulation = data.splice(removeChina, 1).reduce((acc, item) => acc + item.population, 0)
-console.log(sumOfPopulation)
+const newCountryArray = data.filter(item => item.country !== "China")
+.reduce((acc, item) => acc + item.population, 0)
+
+console.log(newCountryArray)
