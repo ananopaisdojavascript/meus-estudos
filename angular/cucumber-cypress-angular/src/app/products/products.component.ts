@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../models/products';
 import { ProductService } from '../services/product.service';
+import { Product } from '../models/products';
 
 @Component({
   selector: 'app-products',
@@ -9,28 +9,20 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit {
 
-  productArray: Product[];
+  productsArray: Product[] = [];
 
   constructor(private productService: ProductService) {}
 
   title = 'Nossa Lista de Compras'
 
-  get() {
-    this.productService.get().subscribe((data: Product[]) => {
-      this.productArray = data;
+  getProducts() {
+    this.productService.get().subscribe(data => {
+      this.productsArray = data
     })
   }
-
-  delete(id: string) {
-    this.productService.delete(id).subscribe(response => {
-      this.productArray = this.productArray.filter(product => product.id !== id);
-      console.log("Produto eliminado com sucesso!!!!")
-    })
-  }
-
 
   ngOnInit(): void {
-    this.get()
+    this.getProducts()
   }
 
 }

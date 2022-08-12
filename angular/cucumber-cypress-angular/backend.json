@@ -1,20 +1,8 @@
 {
   "products": [
     {
-      "id": "3cd7374a-a0ca-4e51-974e-1faf36bb5709",
+      "id": "3cd7374a",
       "product": "Arroz integral"
-    },
-    {
-      "product": "Arroz parabolizado",
-      "id": "Uf2ejyz"
-    },
-    {
-      "product": "Carne de segunda",
-      "id": "hLp7-Vw"
-    },
-    {
-      "id": "afcH0Sw",
-      "product": "Detergente Minuano"
     }
   ]
 }

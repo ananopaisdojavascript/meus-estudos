@@ -1,6 +1,6 @@
-export const url = 'http://localhost:3000/products'
 
 export const environment = {
-  production: false
+  production: false,
+  url: 'http://localhost:3000'
 };
 
