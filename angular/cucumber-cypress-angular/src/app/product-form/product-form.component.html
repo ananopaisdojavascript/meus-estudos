@@ -1,7 +1,7 @@
-<h1>Cadastro</h1>
+<h1>{{ title }}</h1>
 
-<form>
-  <input type="text" placeholder="Digite um produto">
-  <button type="submit">Enviar</button>
+<form [formGroup]="productForm" (ngSubmit)="updateProduct()">
+  <input type="text" placeholder="Digite um produto" formControlName="product">
+  <button type="submit" [disabled]="productForm.invalid">{{ buttonName }}</button>
   <button routerLink="/produtos">Voltar</button>
 </form>

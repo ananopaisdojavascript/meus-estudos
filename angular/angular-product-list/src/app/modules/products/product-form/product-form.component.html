@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<form [formGroup]="productForm">
+  <input type="text" placeholder="Nome do produto" formControlName="productName">
+  <button type="submit">{{ buttonName }}</button>
+  <button routerLink="/produtos">Voltar</button>
+</form>

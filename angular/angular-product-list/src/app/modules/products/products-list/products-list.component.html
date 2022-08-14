@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+
+<form>
+  <input type="text" placeholder="Pesquise por um produto">
+</form>
+
+<button routerLink="/produtos/formulario">Incluir Produto</button>
+
+<table>
+  <tr>
+    <th>Produto</th>
+  </tr>
+  <tr *ngFor="let item of productArray">
+    <td>{{ item.product }}</td>
+    <td>
+      <button [routerLink]="['/produtos/formulario']">Editar</button>
+    </td>
+    <td>
+      <button (click)="deleteProduct(item)">Excluir</button>
+    </td>
+  </tr>
+</table>
