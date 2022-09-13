@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Exercício nº 1</h1>
+    </header>
+
+    <section class="exercise-title">
+      <p class="text">Escreva um algoritmo que receba quatro números inteiros. Calcule e mostre a soma desses números.</p>
+    </section>
+
+    <section class="container">
+      <form id="submit-form">
+        <label>Digite o primeiro número</label>
+        <div>
+          <input type="text" id="first-value" name="username" />
+        </div>
+        <label>Digite o segundo número</label>
+        <div>
+          <input type="text" id="second-value" name="username" />
+        </div>
+        <label>Digite o terceiro número</label>
+        <div>
+          <input type="text" id="third-value" name="username" />
+        </div>
+        <label>Digite o quarto número</label>
+        <div>
+          <input type="text" id="fourth-value" name="username" />
+        </div>
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+
+    <section id="my-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close">Fechar</button>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-text">Oi <span id="name"></span></h2>
+        </div>
+      </div>
+    </section>
+
+    <script src="./sum.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
