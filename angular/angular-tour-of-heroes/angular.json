@@ -108,7 +108,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "coverae": true
+            "coverage": true
           }
         }
       }
