@@ -16,15 +16,15 @@
 */
 
 const request = new XMLHttpRequest();
-request.addEventListener('readystatechange', () => {
-    if(request.readyState === 4 && request.status === 200) {
-        // console.log(request, request.responseText)
-    } else {
-        //console.log('Não foi possível obter os dados do pokémon')
-    }
-})
-request.open('GET', 'https://pokeapi.co/api/v2/pokemon/pikachu')
-request.send()
+request.addEventListener("readystatechange", () => {
+  if (request.readyState === 4 && request.status === 200) {
+    // console.log(request, request.responseText)
+  } else {
+    //console.log('Não foi possível obter os dados do pokémon')
+  }
+});
+request.open("GET", "https://pokeapi.co/api/v2/pokemon/pikachu");
+request.send();
 // console.log(request)
 
 /*
@@ -41,17 +41,6 @@ request.send()
     - Quantos metros você caminhou (number iniciado em 0).
 */
 
-const me = {
-    firstName: 'Ana Paula',
-    lastName: 'Lopes Araujo',
-    gender: 'female',
-    age: 44,
-    height: 1.78,
-    weight: 100,
-    amIwalking: false,
-    metersWalked: 0
-}
-
 /*
   03
   - Logo abaixo, adicione ao objeto um método que adiciona 1 ao valor da 
@@ -59,18 +48,6 @@ const me = {
   - A cada vez que o método é invocado, 1 deve ser somado à idade atual;
   - Após criar o método, adicione 5 anos à idade do objeto.
 */
-
-me.addYear = function() {
-    return this.age++
-}
-
-// console.log(me.addYear())
-// console.log(me.addYear())
-// console.log(me.addYear())
-// console.log(me.addYear())
-// console.log(me.addYear())
-// console.log(me.addYear())
-
 
 /*
   04
@@ -81,15 +58,6 @@ me.addYear = function() {
   - Após criar o método, faça a pessoa caminhar alguns metros, invocando o 
     método 4x, com diferentes metragens passadas por parâmetro.
 */
-
-me.addMeters = function(meter) {
-    return this.amIwalking += meter;
-}
-
-// console.log(me.addMeters(4))
-// console.log(me.addMeters(1))
-// console.log(me.addMeters(14))
-// console.log(me.addMeters(34))
 
 /*
   05
@@ -107,29 +75,58 @@ me.addMeters = function(meter) {
       "metro", no singular.
 */
 
-const getGender = (gender, male, female) => gender === 'female' ? female : male;
-const getYear = (age, year, years) => age === 1 ? year : years;
-const getMeter = (quantity, meter, meters) => quantity === 1 ? meter : meters;
-
-
-const personalInfo = (gender, age, quantity) => {
- const getGender = gender;
- const maleOrFemale = getGender(getGender, 'a', 'o')
- const getAge = age;
- const yearOrYears = getYear(getAge, 'ano', 'anos')
- const getMeter = quantity;
- const meterOrMeters= getMeter(getMeter, 'metro', 'metros')
- return `Oi. Eu sou ${maleOrFemale} NOME_COMPLETO, tenho IDADE ${yearOrYears}, ALTURA metros de altura, 
-  peso PESO quilos e, só hoje, eu já caminhei ${meterOrMeters} 
-  metros.`
+const myPersonalInfo = {
+	"firstName": "Ana Paula",
+  "lastName": "Lopes Araujo",
+  "gender": "female",
+  "age": 44,
+  "height": 1.78,
+  "weight": 100,
+  "amIWalking": true,
+  "metersWalked": 0,
 }
 
-
-me.getInfo = function() {
-  
+myPersonalInfo.addYear = function(){
+  return this.age++
 }
 
-console.log(me.getInfo())
+for(let i = 0; i < 5; i++) {
+  console.log(myPersonalInfo.addYear())
+}
+
+myPersonalInfo.addMeters = function(meter) {
+  	myPersonalInfo.metersWalked += meter;
+    myPersonalInfo.walk = true;
+}
+
+const meters = [5, 10, 15, 20]
+
+for(let i = 0; i < meters.length; i++) {
+  console.log(meters[i])
+}
+
+const getGender = (gender, female, male) => {
+	return gender === "female" ? female : male
+}
+
+const getAge = (age, year, years) => {
+	return year === 1 ? year : years
+}
+
+const getMeters = (quantity, meter, meters) => {
+	return quantity === 1 ? meter : meters
+}
+
+myPersonalInfo.getInfo = function() {
+    let maleOrFemale = getGender(this.gender, "a", "o")
+    let yearOrYears = getAge(this.age, "ano", "anos")
+    let meterOrMeters = getMeters(this.addMeters(7), "metro", "metros")
+  	return `Oi. Eu sou ${maleOrFemale} ${this.firstName}, tenho ${this.age} ${yearOrYears}, 
+    ${this.height} metros de altura, peso ${this.weight} quilos e, 
+    só hoje, eu já caminhei ${this.metersWalked} ${meterOrMeters}.`
+  }
+
+console.log(myPersonalInfo.getInfo())
 
 /*
   06
@@ -143,16 +140,16 @@ console.log(me.getInfo())
 */
 
 const truthyOrFalsy = (value) => {
-	return Boolean(value)
-}
+  return Boolean(value);
+};
 
-console.log(truthyOrFalsy(1))
-console.log(truthyOrFalsy("oi"))
-console.log(truthyOrFalsy(200))
-console.log(truthyOrFalsy(true))
-console.log(truthyOrFalsy('typeof'))
-console.log(truthyOrFalsy(1000))
-console.log(truthyOrFalsy(`Oi`)) 
+// console.log(truthyOrFalsy(1));
+// console.log(truthyOrFalsy("oi"));
+// console.log(truthyOrFalsy(200));
+// console.log(truthyOrFalsy(true));
+// console.log(truthyOrFalsy("typeof"));
+// console.log(truthyOrFalsy(1000));
+// console.log(truthyOrFalsy(`Oi`));
 
 /*
   07
@@ -170,3 +167,27 @@ console.log(truthyOrFalsy(`Oi`))
     os livros.
   Dica: propriedades de objetos podem ser declaradas como strings.
 */
+
+const getBook = bookName => {
+  const books = {
+    "Crepúsculo": {
+      pages: 500,
+      author: "Stephanie Meyer",
+      publisher: "Intrínseca"
+    },
+    "Lua Nova": {
+      pages: 600,
+      author: "Stephanie Meyer",
+      publisher: "Intrínseca"
+    },
+    "Amanhecer": {
+      pages: 400,
+      author: "Stephanie Meyer",
+      publisher: "Intrínseca"
+    }
+  }
+
+  return books[bookName] || books;
+}
+
+console.log(getBook('Lua Nova'))
