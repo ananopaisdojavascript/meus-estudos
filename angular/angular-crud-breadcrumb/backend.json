@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "name": "Choi YuJin",
+      "name": "YuJin",
       "group": "Kepler"
     },
     {
@@ -44,6 +44,11 @@
       "name": "Sakura",
       "group": "Le Sserafim",
       "id": 9
+    },
+    {
+      "name": "Kazhua",
+      "group": "Le Sserafim",
+      "id": 10
     }
   ]
 }

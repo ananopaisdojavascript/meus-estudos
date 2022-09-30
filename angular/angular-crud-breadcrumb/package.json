@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint --ext .js,.ts src",
     "cypress:open": "cypress open"
@@ -48,7 +49,6 @@
     "eslint-plugin-prettier": "^4.1.0",
     "jest": "^28.1.2",
     "jest-preset-angular": "^12.1.0",
-    "karma-coverage": "~2.2.0",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
     "typescript": "~4.7.2"
@@ -56,7 +56,7 @@
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
-      "<rootDir>/setupJest.ts"
+      "<rootDir>/src/setup.jest.ts"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
